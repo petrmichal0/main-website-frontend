@@ -46,13 +46,15 @@ const Heartbeat = () => {
             startOffset: ["-100%", "100%"], // Text běží od konce cesty na začátek
           }}
           transition={{
-            duration: 2,
+            duration: 10,
             repeat: Infinity,
             ease: "linear",
           }}
         >
-          Váš text zde, který se bude opakovat podél cesty EKG - Váš text zde,
-          který se bude opakovat podél cesty EKG
+          "const Greeting = () =
+          <div className="p-4 bg-blue-500 text-white text-center rounded">
+            Hello, welcome to our website!
+          </div>
         </motion.textPath>
       </motion.text>
     </svg>
