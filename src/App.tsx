@@ -5,7 +5,6 @@ import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
 import Technologies from "./components/Technologies";
-import Heartbeat from "./Heartbeat";
 
 function App() {
   return (
@@ -13,7 +12,6 @@ function App() {
       <div className="container mx-auto px-8">
         <Navbar />
         <Hero />
-        <Heartbeat />
         <About />
         <Technologies />
         <Experience />
