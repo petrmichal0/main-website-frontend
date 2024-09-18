@@ -3,7 +3,11 @@ import { motion } from "framer-motion";
 
 function Contact() {
   return (
-    <div className="border-b border-neutral-900 pb-20">
+    <div
+      id="contact"
+      className="border-b border-neutral-900 pb-20 flex flex-col "
+      style={{ minHeight: `calc(100vh - 96px)` }} // Odečtení výšky navbaru (96px)
+    >
       <motion.h1
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
@@ -18,6 +22,8 @@ function Contact() {
         <a href="#" className="border-b">
           {CONTACT.email}
         </a>
+        <div className="flex-grow"></div>
+        {/* Dynamický prostor pro zbývající část */}
       </div>
     </div>
   );
