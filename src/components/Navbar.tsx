@@ -2,7 +2,6 @@ import { Link } from "react-scroll"; // Import pro smooth scroll
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion"; // Import pro animace
 import { FaBars, FaTimes } from "react-icons/fa"; // Import ikony hamburger a cancel (křížek)
-import logo from "../assets/kevinRushLogo.png";
 
 const Navbar = () => {
   const navbarHeight = 96; // Výška navigace (6rem = 96px)
@@ -67,9 +66,9 @@ const Navbar = () => {
               spy={true}
               onSetActive={() => setActiveSection("hero")}
               onClick={() => setActiveSection("hero")}
-              className="cursor-pointer"
+              className="cursor-pointer text-3xl font-bold text-cyan-300"
             >
-              <img className="mx-2 w-10" src={logo} alt="logo" />
+              {`{PM}`}
             </Link>
           </motion.div>
 
