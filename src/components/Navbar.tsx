@@ -1,5 +1,6 @@
 import { Link } from "react-scroll"; // Import pro smooth scroll
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion"; // Import pro animace
 import { FaBars, FaTimes } from "react-icons/fa"; // Import ikony hamburger a cancel (křížek)
 import logo from "../assets/kevinRushLogo.png";
 
@@ -30,6 +31,19 @@ const Navbar = () => {
 
   const isActive = (section: string) => section === activeSection;
 
+  // Animace pro odkazy v navbaru
+  const linkVariants = {
+    hidden: { opacity: 0, x: 100 },
+    visible: (i: number) => ({
+      opacity: 1,
+      x: 0,
+      transition: {
+        delay: i * 0.1,
+        duration: 0.5,
+      },
+    }),
+  };
+
   return (
     <>
       {/* Navbar */}
@@ -40,21 +54,11 @@ const Navbar = () => {
       >
         <div className="container mx-auto flex items-center justify-between">
           {/* Logo vlevo - Kliknutí na logo přejde na sekci Hero */}
-          <Link
-            to="hero"
-            smooth={true}
-            duration={500}
-            offset={-navbarHeight}
-            spy={true}
-            onSetActive={() => setActiveSection("hero")}
-            onClick={() => setActiveSection("hero")}
-            className="cursor-pointer"
+          <motion.div
+            initial={{ opacity: 0, x: -100 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
           >
-            <img className="mx-2 w-10" src={logo} alt="logo" />
-          </Link>
-
-          {/* Seznam nadpisů vpravo - Skrytí na mobilech */}
-          <div className="hidden lg:flex space-x-8 text-xl text-neutral-300">
             <Link
               to="hero"
               smooth={true}
@@ -63,84 +67,47 @@ const Navbar = () => {
               spy={true}
               onSetActive={() => setActiveSection("hero")}
               onClick={() => setActiveSection("hero")}
-              className={`cursor-pointer ${
-                isActive("hero") ? "text-cyan-300" : "hover:text-cyan-300"
-              }`}
+              className="cursor-pointer"
             >
-              Hero
+              <img className="mx-2 w-10" src={logo} alt="logo" />
             </Link>
-            <Link
-              to="about"
-              smooth={true}
-              duration={500}
-              offset={-navbarHeight}
-              spy={true}
-              onSetActive={() => setActiveSection("about")}
-              onClick={() => setActiveSection("about")}
-              className={`cursor-pointer ${
-                isActive("about") ? "text-cyan-300" : "hover:text-cyan-300"
-              }`}
-            >
-              About
-            </Link>
-            <Link
-              to="technologies"
-              smooth={true}
-              duration={500}
-              offset={-navbarHeight}
-              spy={true}
-              onSetActive={() => setActiveSection("technologies")}
-              onClick={() => setActiveSection("technologies")}
-              className={`cursor-pointer ${
-                isActive("technologies")
-                  ? "text-cyan-300"
-                  : "hover:text-cyan-300"
-              }`}
-            >
-              Technologies
-            </Link>
-            <Link
-              to="experience"
-              smooth={true}
-              duration={500}
-              offset={-navbarHeight}
-              spy={true}
-              onSetActive={() => setActiveSection("experience")}
-              onClick={() => setActiveSection("experience")}
-              className={`cursor-pointer ${
-                isActive("experience") ? "text-cyan-300" : "hover:text-cyan-300"
-              }`}
-            >
-              Experience
-            </Link>
-            <Link
-              to="projects"
-              smooth={true}
-              duration={500}
-              offset={-navbarHeight}
-              spy={true}
-              onSetActive={() => setActiveSection("projects")}
-              onClick={() => setActiveSection("projects")}
-              className={`cursor-pointer ${
-                isActive("projects") ? "text-cyan-300" : "hover:text-cyan-300"
-              }`}
-            >
-              Projects
-            </Link>
-            <Link
-              to="contact"
-              smooth={true}
-              duration={500}
-              offset={-navbarHeight}
-              spy={true}
-              onSetActive={() => setActiveSection("contact")}
-              onClick={() => setActiveSection("contact")}
-              className={`cursor-pointer ${
-                isActive("contact") ? "text-cyan-300" : "hover:text-cyan-300"
-              }`}
-            >
-              Contact
-            </Link>
+          </motion.div>
+
+          {/* Seznam nadpisů vpravo - Skrytí na mobilech */}
+          <div className="hidden lg:flex space-x-8 text-xl text-neutral-300">
+            {[
+              { section: "hero", label: "Hero" },
+              { section: "about", label: "About" },
+              { section: "technologies", label: "Technologies" },
+              { section: "experience", label: "Experience" },
+              { section: "projects", label: "Projects" },
+              { section: "contact", label: "Contact" },
+            ].map((link, index) => (
+              <motion.div
+                key={link.section}
+                custom={index}
+                initial="hidden"
+                animate="visible"
+                variants={linkVariants}
+              >
+                <Link
+                  to={link.section}
+                  smooth={true}
+                  duration={500}
+                  offset={-navbarHeight}
+                  spy={true}
+                  onSetActive={() => setActiveSection(link.section)}
+                  onClick={() => setActiveSection(link.section)}
+                  className={`cursor-pointer ${
+                    isActive(link.section)
+                      ? "text-cyan-300"
+                      : "hover:text-cyan-300"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              </motion.div>
+            ))}
           </div>
 
           {/* Ikona hamburger menu na mobilech */}
@@ -178,90 +145,30 @@ const Navbar = () => {
             <FaTimes />
           </button>
 
-          <Link
-            to="hero"
-            smooth={true}
-            duration={500}
-            offset={-navbarHeight}
-            spy={true}
-            onSetActive={() => {
-              setActiveSection("hero");
-              setIsMenuOpen(false);
-            }}
-            className="cursor-pointer hover:text-cyan-300"
-          >
-            Hero
-          </Link>
-          <Link
-            to="about"
-            smooth={true}
-            duration={500}
-            offset={-navbarHeight}
-            spy={true}
-            onSetActive={() => {
-              setActiveSection("about");
-              setIsMenuOpen(false);
-            }}
-            className="cursor-pointer hover:text-cyan-300"
-          >
-            About
-          </Link>
-          <Link
-            to="technologies"
-            smooth={true}
-            duration={500}
-            offset={-navbarHeight}
-            spy={true}
-            onSetActive={() => {
-              setActiveSection("technologies");
-              setIsMenuOpen(false);
-            }}
-            className="cursor-pointer hover:text-cyan-300"
-          >
-            Technologies
-          </Link>
-          <Link
-            to="experience"
-            smooth={true}
-            duration={500}
-            offset={-navbarHeight}
-            spy={true}
-            onSetActive={() => {
-              setActiveSection("experience");
-              setIsMenuOpen(false);
-            }}
-            className="cursor-pointer hover:text-cyan-300"
-          >
-            Experience
-          </Link>
-          <Link
-            to="projects"
-            smooth={true}
-            duration={500}
-            offset={-navbarHeight}
-            spy={true}
-            onSetActive={() => {
-              setActiveSection("projects");
-              setIsMenuOpen(false);
-            }}
-            className="cursor-pointer hover:text-cyan-300"
-          >
-            Projects
-          </Link>
-          <Link
-            to="contact"
-            smooth={true}
-            duration={500}
-            offset={-navbarHeight}
-            spy={true}
-            onSetActive={() => {
-              setActiveSection("contact");
-              setIsMenuOpen(false);
-            }}
-            className="cursor-pointer hover:text-cyan-300"
-          >
-            Contact
-          </Link>
+          {[
+            { section: "hero", label: "Hero" },
+            { section: "about", label: "About" },
+            { section: "technologies", label: "Technologies" },
+            { section: "experience", label: "Experience" },
+            { section: "projects", label: "Projects" },
+            { section: "contact", label: "Contact" },
+          ].map((link, index) => (
+            <Link
+              key={link.section}
+              to={link.section}
+              smooth={true}
+              duration={500}
+              offset={-navbarHeight}
+              spy={true}
+              onSetActive={() => {
+                setActiveSection(link.section);
+                setIsMenuOpen(false);
+              }}
+              className="cursor-pointer hover:text-cyan-300"
+            >
+              {link.label}
+            </Link>
+          ))}
         </div>
       </div>
     </>
