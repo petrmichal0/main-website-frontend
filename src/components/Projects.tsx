@@ -1,3 +1,4 @@
+import { useState } from "react"; // Import useState pro správu filtrování
 import { PROJECTS } from "../constants";
 import { motion } from "framer-motion";
 import {
@@ -6,18 +7,29 @@ import {
   FaCss3Alt,
   FaHtml5,
   FaGithub,
-} from "react-icons/fa"; // Import ikon z react-icons
+} from "react-icons/fa";
 import {
   SiTailwindcss,
   SiTypescript,
   SiRedux,
   SiVite,
   SiMongodb,
-} from "react-icons/si"; // Další specifické ikony
-// Definice typu pro jednotlivé technologie
+} from "react-icons/si";
+import { AiOutlineLink } from "react-icons/ai"; // Ikona pro demo
+import { BiBook } from "react-icons/bi"; // Ikona pro dokumentaci
+
+// Definice typu pro technologie a další odkazy
 type TechnologyIcon = {
   icon: JSX.Element;
   color: string;
+};
+
+// Definice typu pro odkazy na GitHub, demo a dokumentaci
+type LinkIcon = {
+  icon: JSX.Element;
+  color: string;
+  label: string;
+  url?: string; // URL pro GitHub, demo nebo dokumentaci
 };
 
 // Definice typu pro objekt s technologiemi
@@ -39,7 +51,28 @@ const technologyIcons: TechnologyIcons = {
   GitHub: { icon: <FaGithub />, color: "bg-gray-800" },
 };
 
+// Mapa odkazů na GitHub, demo a dokumentaci
+const linkIcons: Record<string, LinkIcon> = {
+  GitHub: { icon: <FaGithub />, color: "bg-gray-900", label: "GitHub" },
+  Demo: { icon: <AiOutlineLink />, color: "bg-green-600", label: "Demo" },
+  Documentation: {
+    icon: <BiBook />,
+    color: "bg-blue-500",
+    label: "Documentation",
+  },
+};
+
+// Definování seznamu technologií pro filtrování
+const filterOptions = ["All", "React", "Node.js", "Angular", "Vue.js"];
+
 function Projects() {
+  const [activeFilter, setActiveFilter] = useState("All"); // Stav pro sledování aktuálního filtru
+
+  // Funkce pro filtrování projektů podle technologie
+  const filteredProjects = PROJECTS.filter((project) =>
+    activeFilter === "All" ? true : project.technologies.includes(activeFilter)
+  );
+
   return (
     <div id="projects" className="border-b border-neutral-900 pb-4">
       <motion.h1
@@ -50,8 +83,26 @@ function Projects() {
       >
         Projects
       </motion.h1>
+
+      {/* Filtrovací tlačítka */}
+      <div className="flex justify-center space-x-4 mb-10">
+        {filterOptions.map((filter) => (
+          <button
+            key={filter}
+            onClick={() => setActiveFilter(filter)}
+            className={`${
+              activeFilter === filter
+                ? "bg-cyan-300 text-black"
+                : "bg-neutral-300 text-black"
+            } px-4 py-2 rounded-md font-medium`}
+          >
+            {filter}
+          </button>
+        ))}
+      </div>
+
       <div>
-        {PROJECTS.map((project, index) => (
+        {filteredProjects.map((project, index) => (
           <div
             key={index}
             className="mb-8 flex flex-wrap justify-center text-center lg:text-left lg:justify-center"
@@ -79,7 +130,8 @@ function Projects() {
               <h6 className="mb-2 font-semibold">{project.title}</h6>
               <p className="mb-4 text-neutral-400">{project.description}</p>
 
-              <div className="flex flex-wrap gap-2">
+              {/* Technologie */}
+              <div className="flex flex-wrap gap-2 mb-4">
                 {project.technologies.map((tech, index) => (
                   <div
                     key={index}
@@ -91,6 +143,43 @@ function Projects() {
                     <span>{tech}</span>
                   </div>
                 ))}
+              </div>
+
+              {/* Odkazy na GitHub, demo a dokumentaci */}
+              <div className="flex flex-wrap gap-2">
+                {project.github && (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`flex items-center space-x-2 rounded-md px-2 py-1 text-white text-sm font-medium ${linkIcons.GitHub.color}`}
+                  >
+                    {linkIcons.GitHub.icon}
+                    <span>{linkIcons.GitHub.label}</span>
+                  </a>
+                )}
+                {project.demo && (
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`flex items-center space-x-2 rounded-md px-2 py-1 text-white text-sm font-medium ${linkIcons.Demo.color}`}
+                  >
+                    {linkIcons.Demo.icon}
+                    <span>{linkIcons.Demo.label}</span>
+                  </a>
+                )}
+                {project.documentation && (
+                  <a
+                    href={project.documentation}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`flex items-center space-x-2 rounded-md px-2 py-1 text-white text-sm font-medium ${linkIcons.Documentation.color}`}
+                  >
+                    {linkIcons.Documentation.icon}
+                    <span>{linkIcons.Documentation.label}</span>
+                  </a>
+                )}
               </div>
             </motion.div>
           </div>
