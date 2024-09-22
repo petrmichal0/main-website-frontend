@@ -1,6 +1,7 @@
 import { ABOUT_TEXT } from "../constants";
 import aboutImg from "../assets/about.jpg";
 import { motion } from "framer-motion";
+import { FaFacebook, FaLinkedin, FaGithub } from "react-icons/fa";
 
 function About() {
   return (
@@ -33,6 +34,37 @@ function About() {
         >
           <div className="flex justify-center lg:justify-start">
             <p className="my-2 max-w-xl py-6">{ABOUT_TEXT}</p>
+          </div>
+
+          {/* Ikony sociálních sítí */}
+          <div className="flex justify-center lg:justify-start space-x-4 mt-6">
+            <a
+              href="https://www.facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 rounded-md bg-blue-600 text-white flex justify-center items-center hover:bg-blue-800"
+              title="Facebook"
+            >
+              <FaFacebook className="w-6 h-6" />
+            </a>
+            <a
+              href="https://www.linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 rounded-md bg-blue-500 text-white flex justify-center items-center hover:bg-blue-700"
+              title="LinkedIn"
+            >
+              <FaLinkedin className="w-6 h-6" />
+            </a>
+            <a
+              href="https://www.github.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 rounded-md bg-gray-900 text-white flex justify-center items-center hover:bg-gray-700"
+              title="GitHub"
+            >
+              <FaGithub className="w-6 h-6" />
+            </a>
           </div>
         </motion.div>
       </div>
