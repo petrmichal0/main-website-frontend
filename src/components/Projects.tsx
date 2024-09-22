@@ -14,9 +14,19 @@ import {
   SiVite,
   SiMongodb,
 } from "react-icons/si"; // Další specifické ikony
+// Definice typu pro jednotlivé technologie
+type TechnologyIcon = {
+  icon: JSX.Element;
+  color: string;
+};
+
+// Definice typu pro objekt s technologiemi
+type TechnologyIcons = {
+  [key: string]: TechnologyIcon;
+};
 
 // Mapa technologií a jejich ikon a barev
-const technologyIcons: Record<string, { icon: JSX.Element; color: string }> = {
+const technologyIcons: TechnologyIcons = {
   React: { icon: <FaReact />, color: "bg-cyan-500" },
   TypeScript: { icon: <SiTypescript />, color: "bg-blue-500" },
   Vite: { icon: <SiVite />, color: "bg-purple-500" },
