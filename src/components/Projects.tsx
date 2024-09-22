@@ -1,5 +1,33 @@
 import { PROJECTS } from "../constants";
 import { motion } from "framer-motion";
+import {
+  FaReact,
+  FaNodeJs,
+  FaCss3Alt,
+  FaHtml5,
+  FaGithub,
+} from "react-icons/fa"; // Import ikon z react-icons
+import {
+  SiTailwindcss,
+  SiTypescript,
+  SiRedux,
+  SiVite,
+  SiMongodb,
+} from "react-icons/si"; // Další specifické ikony
+
+// Mapa technologií a jejich ikon a barev
+const technologyIcons: Record<string, { icon: JSX.Element; color: string }> = {
+  React: { icon: <FaReact />, color: "bg-cyan-500" },
+  TypeScript: { icon: <SiTypescript />, color: "bg-blue-500" },
+  Vite: { icon: <SiVite />, color: "bg-purple-500" },
+  Redux: { icon: <SiRedux />, color: "bg-purple-700" },
+  TailwindCSS: { icon: <SiTailwindcss />, color: "bg-teal-500" },
+  "Node.js": { icon: <FaNodeJs />, color: "bg-green-500" },
+  MongoDB: { icon: <SiMongodb />, color: "bg-green-600" },
+  CSS: { icon: <FaCss3Alt />, color: "bg-blue-400" },
+  HTML: { icon: <FaHtml5 />, color: "bg-orange-500" },
+  GitHub: { icon: <FaGithub />, color: "bg-gray-800" },
+};
 
 function Projects() {
   return (
@@ -40,14 +68,20 @@ function Projects() {
             >
               <h6 className="mb-2 font-semibold">{project.title}</h6>
               <p className="mb-4 text-neutral-400">{project.description}</p>
-              {project.technologies.map((tech, index) => (
-                <span
-                  key={index}
-                  className="mr-2 rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-purple-900"
-                >
-                  {tech}
-                </span>
-              ))}
+
+              <div className="flex flex-wrap gap-2">
+                {project.technologies.map((tech, index) => (
+                  <div
+                    key={index}
+                    className={`flex items-center space-x-2 rounded-md px-2 py-1 text-white text-sm font-medium ${
+                      technologyIcons[tech]?.color || "bg-neutral-800"
+                    }`}
+                  >
+                    {technologyIcons[tech]?.icon || null}
+                    <span>{tech}</span>
+                  </div>
+                ))}
+              </div>
             </motion.div>
           </div>
         ))}
