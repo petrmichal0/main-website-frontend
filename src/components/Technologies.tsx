@@ -19,6 +19,33 @@ const iconVariants = (duration: number) => ({
   },
 });
 
+const technologyIcons = {
+  React: {
+    icon: <RiReactjsLine className="text-5xl text-white" />,
+    color: "bg-cyan-500",
+  },
+  NextJS: {
+    icon: <TbBrandNextjs className="text-5xl text-white" />,
+    color: "bg-gray-900",
+  },
+  MongoDB: {
+    icon: <SiMongodb className="text-5xl text-white" />,
+    color: "bg-green-500",
+  },
+  Redis: {
+    icon: <DiRedis className="text-5xl text-white" />,
+    color: "bg-red-700",
+  },
+  NodeJS: {
+    icon: <FaNodeJs className="text-5xl text-white" />,
+    color: "bg-green-500",
+  },
+  PostgreSQL: {
+    icon: <BiLogoPostgresql className="text-5xl text-white" />,
+    color: "bg-blue-500",
+  },
+};
+
 function Technologies() {
   return (
     <div id="technologies" className="border-b border-neutral-800 pb-24">
@@ -36,54 +63,19 @@ function Technologies() {
         transition={{ duration: 1.5 }}
         className="flex flex-wrap items-center justify-center gap-4"
       >
-        <motion.div
-          variants={iconVariants(1)}
-          initial="initial"
-          animate="animate"
-          className="rounded-2xl border-4 border-neutral-800 p-4"
-        >
-          <RiReactjsLine className="text-7xl text-cyan-400" />
-        </motion.div>
-        <motion.div
-          variants={iconVariants(1.5)}
-          initial="initial"
-          animate="animate"
-          className="rounded-2xl border-4 border-neutral-800 p-4"
-        >
-          <TbBrandNextjs className="text-7xl text-cyan-400" />
-        </motion.div>
-        <motion.div
-          variants={iconVariants(2)}
-          initial="initial"
-          animate="animate"
-          className="rounded-2xl border-4 border-neutral-800 p-4"
-        >
-          <SiMongodb className="text-7xl text-green-500" />
-        </motion.div>
-        <motion.div
-          variants={iconVariants(2.5)}
-          initial="initial"
-          animate="animate"
-          className="rounded-2xl border-4 border-neutral-800 p-4"
-        >
-          <DiRedis className="text-7xl text-red-700" />
-        </motion.div>
-        <motion.div
-          variants={iconVariants(3)}
-          initial="initial"
-          animate="animate"
-          className="rounded-2xl border-4 border-neutral-800 p-4"
-        >
-          <FaNodeJs className="text-7xl text-green-500" />
-        </motion.div>
-        <motion.div
-          variants={iconVariants(3.5)}
-          initial="initial"
-          animate="animate"
-          className="rounded-2xl border-4 border-neutral-800 p-4"
-        >
-          <BiLogoPostgresql className="text-7xl text-cyan-400" />
-        </motion.div>
+        {Object.entries(technologyIcons).map(
+          ([tech, { icon, color }], index) => (
+            <motion.div
+              key={tech}
+              variants={iconVariants(index + 1)}
+              initial="initial"
+              animate="animate"
+              className={`w-16 h-16 flex items-center justify-center rounded-md ${color}`}
+            >
+              {icon}
+            </motion.div>
+          )
+        )}
       </motion.div>
     </div>
   );
