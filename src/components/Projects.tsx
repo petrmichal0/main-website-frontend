@@ -111,15 +111,18 @@ function Projects() {
                 className="w-full h-48 object-cover rounded-lg mb-4"
               />
               {/* Ikony GitHub, Demo, Dokumentace v pravém dolním rohu */}
-              <div className="absolute bottom-9 right-0 flex space-x-2 bg-black  p-2 transform translate-y-1/2">
+              <div className="absolute bottom-9 right-0 flex space-x-2 bg-black p-2 transform translate-y-1/2">
                 {project.github && (
                   <a
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-white"
+                    className="relative group text-white"
                   >
                     <FaGithub className="w-6 h-6" />
+                    <span className="absolute bottom-full mb-1 hidden group-hover:flex justify-center items-center bg-black text-white text-xs rounded px-2 py-1">
+                      GitHub
+                    </span>
                   </a>
                 )}
                 {project.documentation && (
@@ -127,9 +130,12 @@ function Projects() {
                     href={project.documentation}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-white"
+                    className="relative group text-white"
                   >
                     <BiBook className="w-6 h-6" />
+                    <span className="absolute bottom-full mb-1 hidden group-hover:flex justify-center items-center bg-black text-white text-xs rounded px-2 py-1">
+                      Documentation
+                    </span>
                   </a>
                 )}
                 {project.demo && (
@@ -137,10 +143,13 @@ function Projects() {
                     href={project.demo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-white flex items-center space-x-1"
+                    className="relative group flex items-center text-white space-x-1"
                   >
                     <span className="text-sm">Demo</span>
                     <BiRightArrowAlt className="w-4 h-4" />
+                    <span className="absolute bottom-full mb-1 hidden group-hover:flex justify-center items-center bg-black text-white text-xs rounded px-2 py-1">
+                      Demo
+                    </span>
                   </a>
                 )}
               </div>
@@ -157,11 +166,14 @@ function Projects() {
               {project.technologies.map((tech, index) => (
                 <div
                   key={index}
-                  className={`flex items-center justify-center rounded-md w-8 h-8 text-white text-sm font-medium ${
+                  className={`relative group flex items-center justify-center rounded-md w-8 h-8 text-white text-sm font-medium ${
                     technologyIcons[tech]?.color || "bg-neutral-800"
                   }`}
                 >
                   {technologyIcons[tech]?.icon || null}
+                  <span className="absolute bottom-full mb-1 hidden group-hover:flex justify-center items-center bg-black text-white text-xs rounded px-2 py-1">
+                    {tech}
+                  </span>
                 </div>
               ))}
             </div>
