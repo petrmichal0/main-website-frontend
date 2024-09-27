@@ -101,7 +101,7 @@ function Projects() {
             whileInView={{ opacity: 1, y: 0 }}
             initial={{ opacity: 0, y: 50 }}
             transition={{ duration: 0.5 }}
-            className="w-[350px] bg-neutral-800 p-6 rounded-lg shadow-md relative flex flex-col justify-between"
+            className="w-[350px] bg-neutral-800 p-6 rounded-lg shadow-md relative flex flex-col justify-between transition-transform transform hover:scale-120 hover:shadow-[0px_0px_30px_rgba(5,_200,_200,_0.4)]"
           >
             {/* Obrázek projektu */}
             <div className="relative">

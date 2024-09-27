@@ -1,5 +1,5 @@
 import { HERO_CONTENT } from "../constants/index";
-import profilePic from "../assets/kevinRushProfile.png";
+import profilePic from "../assets/mountainProfile.png";
 import { motion } from "framer-motion";
 
 const container = (delay: number) => ({
@@ -13,7 +13,7 @@ const container = (delay: number) => ({
 
 function Hero() {
   return (
-    <div id="hero" className="border-b border-neutral-900 pb-4 lg:mb-35 pt-24">
+    <div id="hero" className="border-b border-neutral-900 pb-24 lg:mb-35 pt-24">
       <div className="flex flex-col lg:flex-row lg:items-center">
         <div className="w-full lg:w-1/2">
           <div className="flex flex-col items-center lg:items-start">
@@ -21,18 +21,11 @@ function Hero() {
               variants={container(0)}
               initial="hidden"
               animate="visible"
-              className="pb-16 text-5xl font-thin tracking-tight lg:text-7xl lg:mt-16"
+              className="pb-12 text-5xl font-thin tracking-tight lg:text-7xl lg:mt-16"
             >
-              Petr Michal
+              Hello, I am Petr Michal
             </motion.h1>
-            <motion.span
-              variants={container(0.5)}
-              initial="hidden"
-              animate="visible"
-              className="bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-2xl tracking-tight text-transparent lg:text-3xl"
-            >
-              Full Stack Developer
-            </motion.span>
+
             <motion.p
               variants={container(1)}
               initial="hidden"
