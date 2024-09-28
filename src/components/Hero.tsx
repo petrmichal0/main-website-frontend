@@ -1,6 +1,7 @@
 import { HERO_CONTENT } from "../constants/index";
 import profilePic from "../assets/mountainProfile.png";
 import { motion } from "framer-motion";
+import { Link } from "react-scroll"; // Import pro smooth scroll
 
 const container = (delay: number) => ({
   hidden: { x: -100, opacity: 0 },
@@ -38,15 +39,24 @@ function Hero() {
               variants={container(1.5)}
               initial="hidden"
               animate="visible"
-              className="mt-6 mb-8 lg:mb-0"
+              className="mt-6 mb-8 lg:mb-0 flex space-x-4"
             >
               <a
-                href="path-to-your-cv-file.pdf"
+                href="/CV.pdf"
                 download
                 className="inline-block px-6 py-3 text-lg text-white bg-cyan-500 rounded-lg hover:bg-cyan-700 transition-colors duration-300"
               >
                 Download CV
               </a>
+
+              <Link
+                to="contact" // Odkazuje na ID sekce Contact
+                smooth={true}
+                duration={500}
+                className="inline-block px-6 py-3 text-lg text-white bg-cyan-500 rounded-lg hover:bg-cyan-700 transition-colors duration-300 cursor-pointer"
+              >
+                Contact Me
+              </Link>
             </motion.div>
           </div>
         </div>

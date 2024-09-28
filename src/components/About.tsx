@@ -42,28 +42,28 @@ function About() {
               href="https://www.facebook.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 rounded-md bg-blue-600 text-white flex justify-center items-center hover:bg-blue-800"
+              className="w-16 h-16 rounded-md bg-blue-600 text-white flex justify-center items-center hover:bg-blue-800"
               title="Facebook"
             >
-              <FaFacebook className="w-6 h-6" />
+              <FaFacebook className="w-10 h-10" />
             </a>
             <a
               href="https://www.linkedin.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 rounded-md bg-blue-500 text-white flex justify-center items-center hover:bg-blue-700"
+              className="w-16 h-16 rounded-md bg-blue-500 text-white flex justify-center items-center hover:bg-blue-700"
               title="LinkedIn"
             >
-              <FaLinkedin className="w-6 h-6" />
+              <FaLinkedin className="w-10 h-10" />
             </a>
             <a
               href="https://www.github.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 rounded-md bg-gray-900 text-white flex justify-center items-center hover:bg-gray-700"
+              className="w-16 h-16 rounded-md bg-gray-900 text-white flex justify-center items-center hover:bg-gray-700"
               title="GitHub"
             >
-              <FaGithub className="w-6 h-6" />
+              <FaGithub className="w-10 h-10" />
             </a>
           </div>
         </motion.div>
