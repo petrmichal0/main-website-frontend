@@ -138,9 +138,13 @@ function Technologies() {
               variants={iconVariants(index)}
               initial="hidden"
               whileInView="visible"
-              className={`w-28 h-28 flex items-center justify-center rounded-md ${color}`}
+              className={`relative w-28 h-28 flex items-center justify-center rounded-md ${color} group`}
             >
               {icon}
+              {/* Tooltip */}
+              <span className="absolute bottom-0 mb-2 text-xs text-white px-2 py-1 rounded bg-black opacity-0 group-hover:opacity-100 transition-opacity">
+                {tech}
+              </span>
             </motion.div>
           )
         )}
