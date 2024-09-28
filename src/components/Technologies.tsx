@@ -1,25 +1,28 @@
 import { RiReactjsLine } from "react-icons/ri";
-import { TbBrandNextjs } from "react-icons/tb";
+import { VscVscode } from "react-icons/vsc";
+import { TbBrandFramerMotion } from "react-icons/tb";
+
 import {
-  SiMongodb,
-  SiFirebase,
   SiTailwindcss,
   SiSupabase,
-  SiFramer,
   SiJavascript,
   SiTypescript,
+  SiNetlify,
+  SiMongodb,
 } from "react-icons/si";
+import { IoLogoFirebase } from "react-icons/io5";
 import {
   FaNodeJs,
   FaHtml5,
   FaCss3Alt,
-  FaGit,
+  FaGitAlt,
   FaGithub,
   FaFigma,
 } from "react-icons/fa";
 import { SiCanva } from "react-icons/si";
-import { BiLogoPostgresql, BiLogoHeroku, BiLogoNetlify } from "react-icons/bi";
+import { BiLogoHeroku } from "react-icons/bi";
 import { motion } from "framer-motion";
+import chatgptImage from "/chatgpt.png";
 
 const iconVariants = (i: number) => ({
   hidden: { opacity: 0, x: 100 },
@@ -44,71 +47,75 @@ const technologyIcons = {
   },
   JavaScript: {
     icon: <SiJavascript className="text-7xl text-white" />,
-    color: "bg-yellow-500",
+    color: "bg-yellow-400",
   },
   React: {
     icon: <RiReactjsLine className="text-7xl text-white" />,
-    color: "bg-cyan-500",
-  },
-  "React Native": {
-    icon: <RiReactjsLine className="text-7xl text-white" />,
-    color: "bg-blue-500",
+    color: "bg-[#0d99ff]",
   },
   TypeScript: {
     icon: <SiTypescript className="text-7xl text-white" />,
-    color: "bg-blue-700",
+    color: "bg-[#3178c6]",
   },
   TailwindCSS: {
     icon: <SiTailwindcss className="text-7xl text-white" />,
-    color: "bg-teal-500",
+    color: "bg-[#2298bd]",
   },
   "Framer Motion": {
-    icon: <SiFramer className="text-7xl text-white" />,
-    color: "bg-pink-500",
+    icon: <TbBrandFramerMotion className="text-7xl text-white" />,
+    color: "bg-[#bc4a97]",
   },
   NodeJS: {
     icon: <FaNodeJs className="text-7xl text-white" />,
     color: "bg-green-500",
   },
+  Express: {
+    icon: <span className="text-2xl font-bold text-white">Express</span>, // Custom text icon for Express
+    color: "bg-gray-800", // Grey background color for Express
+  },
+  MongoDB: {
+    icon: <SiMongodb className="text-7xl text-white" />,
+    color: "bg-[#4DB33D]",
+  },
   Supabase: {
     icon: <SiSupabase className="text-7xl text-white" />,
-    color: "bg-green-500",
+    color: "bg-[#1e7d52]",
   },
   Firebase: {
-    icon: <SiFirebase className="text-7xl text-white" />,
+    icon: <IoLogoFirebase className="text-7xl text-white" />,
     color: "bg-yellow-500",
   },
   Git: {
-    icon: <FaGit className="text-7xl text-white" />,
+    icon: <FaGitAlt className="text-7xl text-white" />,
     color: "bg-red-500",
   },
   GitHub: {
-    icon: <FaGithub className="text-7xl text-white" />,
-    color: "bg-gray-900",
+    icon: <FaGithub className="text-7xl text-gray-900" />,
+    color: "bg-white",
   },
   VSCode: {
-    icon: <FaGithub className="text-7xl text-white" />,
-    color: "bg-blue-500",
+    icon: <VscVscode className="text-7xl text-white" />,
+    color: "bg-[#30a3f1]",
   },
   GPT: {
-    icon: <SiJavascript className="text-7xl text-white" />,
-    color: "bg-green-700",
+    icon: <img src={chatgptImage} alt="ChatGPT" className="w-16 h-16" />,
+    color: "bg-gray-800",
   },
   Heroku: {
     icon: <BiLogoHeroku className="text-7xl text-white" />,
     color: "bg-indigo-600",
   },
   Netlify: {
-    icon: <BiLogoNetlify className="text-7xl text-white" />,
-    color: "bg-teal-400",
+    icon: <SiNetlify className="text-7xl text-white" />,
+    color: "bg-[#05bdba]",
   },
   Figma: {
     icon: <FaFigma className="text-7xl text-white" />,
-    color: "bg-red-400",
+    color: "bg-[#f24e1e]",
   },
   Canva: {
     icon: <SiCanva className="text-7xl text-white" />,
-    color: "bg-blue-300",
+    color: "bg-[#00c4cc]",
   },
 };
 
