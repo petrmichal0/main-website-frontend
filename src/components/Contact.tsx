@@ -2,12 +2,14 @@ import { CONTACT } from "../constants";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import axios from "axios";
+import { FaSpinner } from "react-icons/fa"; // Importování spinner ikony
 
 function Contact() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
   const [status, setStatus] = useState(""); // Stav pro zobrazení stavu odesílání
+  const [isLoading, setIsLoading] = useState(false); // Stav pro načítání
   const maxLength = 500;
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -24,7 +26,7 @@ function Contact() {
     }
 
     try {
-      // Odeslání emailu pomocí axios na backend
+      setIsLoading(true); // Spustíme načítání
       const response = await axios.post(
         "https://main-website-backend-f90ccd0e7203.herokuapp.com/api/contact",
         {
@@ -42,6 +44,8 @@ function Contact() {
       }
     } catch (error) {
       setError("Error sending email. Please try again.");
+    } finally {
+      setIsLoading(false); // Zastavíme načítání
     }
   };
 
@@ -93,9 +97,13 @@ function Contact() {
             {status && <p className="text-green-500">{status}</p>}
             <button
               type="submit"
-              className="py-3 px-6 rounded bg-cyan-300 text-black hover:bg-cyan-400"
+              className="py-3 px-6 rounded bg-cyan-300 text-black hover:bg-cyan-400 flex items-center justify-center space-x-2"
+              disabled={isLoading} // Tlačítko zakázané při načítání
             >
-              Send Message
+              {isLoading && (
+                <FaSpinner className="animate-spin mr-2" /> // Načítací ikona
+              )}
+              <span>{isLoading ? "Sending..." : "Send Message"}</span>
             </button>
           </form>
         </div>
