@@ -1,14 +1,16 @@
 import { CONTACT } from "../constants";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import axios from "axios";
 
 function Contact() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
+  const [status, setStatus] = useState(""); // Stav pro zobrazení stavu odesílání
   const maxLength = 500;
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     // Validace emailu a zprávy
@@ -21,12 +23,26 @@ function Contact() {
       return;
     }
 
-    // Logika pro odeslání emailu bude potřeba na serveru/API, např. přes EmailJS
-    console.log("Email:", email);
-    console.log("Message:", message);
+    try {
+      // Odeslání emailu pomocí axios na backend
+      const response = await axios.post(
+        "https://main-website-backend-f90ccd0e7203.herokuapp.com/api/contact",
+        {
+          email,
+          message,
+        }
+      );
 
-    setError("");
-    alert("Your message has been sent!");
+      if (response.status === 200) {
+        setStatus("Your message has been sent!");
+        setEmail(""); // Resetování formuláře
+        setMessage("");
+      } else {
+        setError("Failed to send message. Please try again.");
+      }
+    } catch (error) {
+      setError("Error sending email. Please try again.");
+    }
   };
 
   return (
@@ -74,6 +90,7 @@ function Contact() {
               required
             />
             {error && <p className="text-red-500">{error}</p>}
+            {status && <p className="text-green-500">{status}</p>}
             <button
               type="submit"
               className="py-3 px-6 rounded bg-cyan-300 text-black hover:bg-cyan-400"
