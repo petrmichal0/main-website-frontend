@@ -64,9 +64,9 @@ function Contact() {
         Contact <span className="text-neutral-500">Me</span>
       </motion.h1>
 
-      <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center lg:justify-between w-full px-6">
+      <div className="flex flex-col lg:flex-row lg:justify-start w-full px-6">
         {/* Levý sloupec */}
-        <div className="w-full lg:w-1/2 p-6 text-center lg:text-right">
+        <div className="w-full lg:w-1/2 p-6 text-center lg:text-right  ">
           <p className="mb-4 font-medium">{CONTACT.address}</p>
           <p className="mb-4">{CONTACT.phoneNo}</p>
           <a href={`mailto:${CONTACT.email}`} className="border-b">
@@ -75,7 +75,7 @@ function Contact() {
         </div>
 
         {/* Pravý sloupec s formulářem */}
-        <div className="w-full lg:w-1/2 p-6">
+        <div className="w-full lg:w-2/5  p-6">
           <form onSubmit={handleSubmit} className="flex flex-col space-y-4">
             <input
               type="email"
