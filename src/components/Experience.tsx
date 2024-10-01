@@ -1,4 +1,4 @@
-import { EXPERIENCES } from "../constants";
+import { EXPERIENCES } from "../constants/data";
 import { motion } from "framer-motion";
 
 function Experience() {

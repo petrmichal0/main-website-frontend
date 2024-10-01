@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { PROJECTS } from "../constants";
+import { PROJECTS } from "../constants/data";
 import { motion } from "framer-motion";
 import {
   FaReact,

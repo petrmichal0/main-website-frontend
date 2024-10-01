@@ -1,4 +1,4 @@
-import { ABOUT_TEXT } from "../constants";
+import { ABOUT_TEXT } from "../constants/data";
 import aboutImg from "../assets/about.jpg";
 import { motion } from "framer-motion";
 import { FaFacebook, FaLinkedin, FaGithub } from "react-icons/fa";

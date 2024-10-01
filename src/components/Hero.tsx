@@ -1,5 +1,5 @@
 import { ReactTyped } from "react-typed";
-import { HERO_CONTENT } from "../constants/index";
+import { HERO_CONTENT } from "../constants/data";
 import profilePic from "../assets/mountainProfile.png";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll"; // Import pro smooth scroll

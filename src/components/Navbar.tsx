@@ -151,7 +151,7 @@ const Navbar = () => {
             { section: "experience", label: "Experience" },
             { section: "projects", label: "Projects" },
             { section: "contact", label: "Contact" },
-          ].map((link, index) => (
+          ].map((link) => (
             <Link
               key={link.section}
               to={link.section}
