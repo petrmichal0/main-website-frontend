@@ -1,40 +1,37 @@
 import { useState } from "react";
-import { PROJECTS } from "../constants/data";
-import { motion } from "framer-motion";
+import { PROJECTS } from "../constants/data"; // Data for the projects
+import { motion } from "framer-motion"; // Library for animations
 import {
   FaReact,
   FaNodeJs,
   FaCss3Alt,
   FaHtml5,
   FaGithub,
-} from "react-icons/fa";
+} from "react-icons/fa"; // React Icons for technology logos
 import {
   SiTailwindcss,
   SiTypescript,
   SiRedux,
   SiVite,
   SiMongodb,
-} from "react-icons/si";
+} from "react-icons/si"; // Additional React Icons
 import { AiOutlineLink } from "react-icons/ai";
-import { BiBook, BiRightArrowAlt } from "react-icons/bi"; // Ikona pro dokumentaci
+import { BiBook, BiRightArrowAlt } from "react-icons/bi"; // Icons for links and documentation
 
 type TechnologyIcon = {
-  icon: JSX.Element;
-  color: string;
+  icon: JSX.Element; // Defines the type for each technology icon
+  color: string; // The background color of the icon container
 };
 
 type LinkIcon = {
-  icon: JSX.Element;
-  color: string;
-  label: string;
-  url?: string;
+  icon: JSX.Element; // Icon for each link (GitHub, Demo, etc.)
+  color: string; // Background color for each link button
+  label: string; // Label for the icon
+  url?: string; // URL for the link (optional)
 };
 
-type TechnologyIcons = {
-  [key: string]: TechnologyIcon;
-};
-
-const technologyIcons: TechnologyIcons = {
+// Object that maps technology names to their respective icons and colors
+const technologyIcons: Record<string, TechnologyIcon> = {
   React: { icon: <FaReact />, color: "bg-cyan-500" },
   TypeScript: { icon: <SiTypescript />, color: "bg-blue-500" },
   Vite: { icon: <SiVite />, color: "bg-purple-500" },
@@ -46,6 +43,7 @@ const technologyIcons: TechnologyIcons = {
   HTML: { icon: <FaHtml5 />, color: "bg-orange-500" },
 };
 
+// Object for different types of project links like GitHub, Demo, and Documentation
 const linkIcons: Record<string, LinkIcon> = {
   GitHub: { icon: <FaGithub />, color: "bg-gray-900", label: "GitHub" },
   Demo: { icon: <AiOutlineLink />, color: "bg-gray-900", label: "Demo" },
@@ -56,32 +54,35 @@ const linkIcons: Record<string, LinkIcon> = {
   },
 };
 
+// Filter options for projects (to filter by technology)
 const filterOptions = ["All", "React", "Node.js", "Angular", "Vue.js"];
 
 function Projects() {
-  const [activeFilter, setActiveFilter] = useState("All");
+  const [activeFilter, setActiveFilter] = useState("All"); // State for the active filter
 
+  // Filtered projects based on the active filter
   const filteredProjects = PROJECTS.filter((project) =>
     activeFilter === "All" ? true : project.technologies.includes(activeFilter)
   );
 
   return (
     <div id="projects" className="border-b border-neutral-900 pb-4">
+      {/* Section Title */}
       <motion.h1
-        whileInView={{ opacity: 1, y: 0 }}
-        initial={{ opacity: 0, y: -100 }}
+        whileInView={{ opacity: 1, y: 0 }} // Animation to appear smoothly
+        initial={{ opacity: 0, y: -100 }} // Start state of the animation
         transition={{ duration: 1.5 }}
         className="my-20 text-center text-4xl"
       >
         Projects
       </motion.h1>
 
-      {/* Filtrovací tlačítka */}
+      {/* Filter Buttons */}
       <div className="flex justify-center space-x-4 mb-10">
         {filterOptions.map((filter) => (
           <button
             key={filter}
-            onClick={() => setActiveFilter(filter)}
+            onClick={() => setActiveFilter(filter)} // Change active filter when clicked
             className={`${
               activeFilter === filter
                 ? "bg-cyan-300 text-black"
@@ -93,24 +94,25 @@ function Projects() {
         ))}
       </div>
 
-      {/* Kontejner s projekty */}
+      {/* Project Cards */}
       <div className="flex flex-wrap justify-center gap-8">
         {filteredProjects.map((project, index) => (
           <motion.div
             key={index}
-            whileInView={{ opacity: 1, y: 0 }}
-            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }} // Animation for project cards
+            initial={{ opacity: 0, y: 50 }} // Start state of the card
             transition={{ duration: 0.5 }}
             className="w-[350px] bg-neutral-800 p-6 rounded-lg shadow-md relative flex flex-col justify-between transition-transform transform hover:scale-105 hover:bg-neutral-700 hover:shadow-[0_0_15px_0_rgba(0,0,0,0.8)]"
           >
-            {/* Obrázek projektu */}
+            {/* Project Image */}
             <div className="relative">
               <img
                 src={project.image}
                 alt={project.title}
                 className="w-full h-48 object-cover rounded-lg mb-4"
               />
-              {/* Ikony GitHub, Demo, Dokumentace v pravém dolním rohu */}
+
+              {/* Link Icons (GitHub, Demo, Documentation) */}
               <div className="absolute bottom-9 right-0 flex space-x-2 bg-black p-2 transform translate-y-1/2">
                 {project.github && (
                   <a
@@ -155,13 +157,13 @@ function Projects() {
               </div>
             </div>
 
-            {/* Název projektu a popis */}
+            {/* Project Title and Description */}
             <div className="flex-grow">
               <h6 className="font-semibold text-lg mb-2">{project.title}</h6>
               <p className="text-neutral-400 mb-4">{project.description}</p>
             </div>
 
-            {/* Technologie vlevo */}
+            {/* Technologies Used in the Project */}
             <div className="flex justify-start items-center space-x-2">
               {project.technologies.map((tech, index) => (
                 <div
@@ -170,9 +172,10 @@ function Projects() {
                     technologyIcons[tech]?.color || "bg-neutral-800"
                   }`}
                 >
-                  {technologyIcons[tech]?.icon || null}
+                  {technologyIcons[tech]?.icon || null}{" "}
+                  {/* Display technology icon */}
                   <span className="absolute bottom-full mb-1 hidden group-hover:flex justify-center items-center bg-black text-white text-xs rounded px-2 py-1">
-                    {tech}
+                    {tech} {/* Display technology name on hover */}
                   </span>
                 </div>
               ))}
