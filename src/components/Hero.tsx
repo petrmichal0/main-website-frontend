@@ -68,7 +68,7 @@ function Hero() {
               transition={{ duration: 1, delay: 1.2 }}
               src={profilePic}
               alt="Petr Michal"
-              className="max-h-[400px] lg:max-h-[500px] w-full object-cover"
+              className="max-h-[400px] lg:max-h-[500px] w-full object-cover rounded-2xl"
             />
           </div>
         </div>
