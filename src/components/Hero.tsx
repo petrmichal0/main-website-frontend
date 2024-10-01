@@ -1,3 +1,4 @@
+import { ReactTyped } from "react-typed";
 import { HERO_CONTENT } from "../constants/index";
 import profilePic from "../assets/mountainProfile.png";
 import { motion } from "framer-motion";
@@ -24,7 +25,20 @@ function Hero() {
               animate="visible"
               className="pb-12 text-5xl font-thin tracking-tight lg:text-7xl lg:mt-16"
             >
-              Hello, I am Petr Michal
+              <span className="font-bold">Hello, I am Petr</span>
+              <br />
+              <ReactTyped
+                strings={[
+                  "a Full-Stack Developer",
+                  "a lover of sports",
+                  "a fan of design",
+                  "creating innovative web solutions",
+                ]}
+                typeSpeed={50}
+                backSpeed={40}
+                loop
+                className="text-cyan-500 font-light"
+              />
             </motion.h1>
 
             <motion.p
@@ -50,7 +64,7 @@ function Hero() {
               </a>
 
               <Link
-                to="contact" // Odkazuje na ID sekce Contact
+                to="contact"
                 smooth={true}
                 duration={500}
                 className="inline-block px-6 py-3 text-lg text-white bg-cyan-500 rounded-lg hover:bg-cyan-700 transition-colors duration-300 cursor-pointer"
