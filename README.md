@@ -130,10 +130,15 @@ main-website-frontend/
 │   ├── App.tsx
 │   ├── main.tsx
 ├── .gitignore
+├── README.md
+├── eslint.config.js
+├── index.html
 ├── package-lock.json
 ├── package.json
-├── README.md
-└── vite.config.js
+├── postcss.config.js
+├── tailwind.config.js
+├── tsconfig.json
+├── vite.config.js
 ```
 
 ## Technologies Used
