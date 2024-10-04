@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start": "serve -s dist"  // Přidání tohoto start skriptu
   },
   "dependencies": {
     "axios": "^1.7.7",
@@ -16,7 +17,8 @@
     "react-dom": "^18.3.1",
     "react-icons": "^5.3.0",
     "react-scroll": "^1.9.0",
-    "react-typed": "^2.0.12"
+    "react-typed": "^2.0.12",
+    "serve": "^14.2.0"  // Přidání serve jako závislost
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
