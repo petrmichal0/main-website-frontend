@@ -152,6 +152,7 @@ main-website-frontend/
 
 - **React Icons:** Provides icons used in the application.
 - **React Typed:** Provides the dynamic typing effect in the Hero section.
+- **React Scroll:** Enables smooth scrolling between sections.
 
 ## License
 
