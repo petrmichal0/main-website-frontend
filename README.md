@@ -31,8 +31,8 @@ Main Website Frontend is a portfolio web application built using modern web tech
 ## Installation
 
 ### Prerequisites
-- Node.js (v12 or higher)
-- npm (v6 or higher)
+- **Node.js**: v20.x
+- **npm**: v10.x
 
 ### Steps
 
