@@ -79,6 +79,7 @@ const Navbar = () => {
               { section: "about", label: "About" },
               { section: "technologies", label: "Technologies" },
               { section: "experience", label: "Experience" },
+              { section: "courses", label: "Courses" },
               { section: "projects", label: "Projects" },
               { section: "contact", label: "Contact" },
             ].map((link, index) => (
