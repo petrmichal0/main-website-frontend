@@ -46,7 +46,7 @@ export const COURSES = [
         link: "https://google.com",
       },
       {
-        iconKey: "Node.js, Express, MongoDB",
+        iconKey: ["NodeJS", "Express", "MongoDB"],
         text: "Node.js, Express, MongoDB - Udemy",
         link: "https://google.com",
       },
@@ -56,7 +56,7 @@ export const COURSES = [
         link: "https://google.com",
       },
       {
-        iconKey: "React & TypeScript",
+        iconKey: ["React", "TypeScript"],
         text: "React & TypeScript - Udemy",
         link: "https://google.com",
       },
@@ -66,7 +66,7 @@ export const COURSES = [
         link: "https://google.com",
       },
       {
-        iconKey: "Git & GitHub",
+        iconKey: ["Git", "GitHub"],
         text: "Git & GitHub - Udemy",
         link: "https://google.com",
       },
@@ -96,12 +96,12 @@ export const COURSES = [
         link: "https://google.com",
       },
       {
-        iconKey: "HTML",
+        iconKey: ["HTML", "CSS"],
         text: "HTML,CSS - Jonas Schmedtmann - Udemy",
         link: "https://google.com",
       },
       {
-        iconKey: "HTML",
+        iconKey: ["HTML", "CSS"],
         text: "HTML,CSS - David Šetek - YouTube",
         link: "https://google.com",
       },
@@ -126,7 +126,7 @@ export const COURSES = [
         link: "https://google.com",
       },
       {
-        iconKey: "Fitness",
+        iconKey: "Running",
         text: "Trenér kondičního běhu 3. třídy",
         link: "https://google.com",
       },
