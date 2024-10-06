@@ -31,6 +31,119 @@ export const EXPERIENCES = [
   },
 ];
 
+export const COURSES = [
+  {
+    year: "2024 - Present",
+    courses: [
+      {
+        iconKey: "React Native",
+        text: "React Native - Udemy",
+        link: "https://google.com",
+      },
+      {
+        iconKey: "Figma",
+        text: "Figma - Udemy",
+        link: "https://google.com",
+      },
+      {
+        iconKey: "Node.js, Express, MongoDB",
+        text: "Node.js, Express, MongoDB - Udemy",
+        link: "https://google.com",
+      },
+      {
+        iconKey: "Figma",
+        text: "Figma - Udemy",
+        link: "https://google.com",
+      },
+      {
+        iconKey: "React & TypeScript",
+        text: "React & TypeScript - Udemy",
+        link: "https://google.com",
+      },
+      {
+        iconKey: "TypeScript",
+        text: "TypeScript - Udemy",
+        link: "https://google.com",
+      },
+      {
+        iconKey: "Git & GitHub",
+        text: "Git & GitHub - Udemy",
+        link: "https://google.com",
+      },
+    ],
+  },
+  {
+    year: "2022 - 2023",
+    courses: [
+      {
+        iconKey: "React",
+        text: "React - Jonas Schmedtmann - Udemy",
+        link: "https://google.com",
+      },
+      {
+        iconKey: "React",
+        text: "React 1,2,3 - David Šetek - YouTube",
+        link: "https://google.com",
+      },
+      {
+        iconKey: "JavaScript",
+        text: "JavaScript - Jonas Schmedtmann - Udemy",
+        link: "https://google.com",
+      },
+      {
+        iconKey: "JavaScript",
+        text: "JavaScript - David Šetek - YouTube",
+        link: "https://google.com",
+      },
+      {
+        iconKey: "HTML",
+        text: "HTML,CSS - Jonas Schmedtmann - Udemy",
+        link: "https://google.com",
+      },
+      {
+        iconKey: "HTML",
+        text: "HTML,CSS - David Šetek - YouTube",
+        link: "https://google.com",
+      },
+    ],
+  },
+  {
+    year: "2009 - 2020",
+    courses: [
+      {
+        iconKey: "Management",
+        text: "Rozvoj manažerských dovedností",
+        link: "https://google.com",
+      },
+      {
+        iconKey: "Coaching",
+        text: "Vzdělávací program 'Koučovací styl vedení'",
+        link: "https://google.com",
+      },
+      {
+        iconKey: "Excel",
+        text: "MS Excel Pokročilý - Gopas",
+        link: "https://google.com",
+      },
+      {
+        iconKey: "Fitness",
+        text: "Trenér kondičního běhu 3. třídy",
+        link: "https://google.com",
+      },
+      {
+        iconKey: "Fitness",
+        text: "Fitness trenér",
+        link: "https://google.com",
+      },
+      {
+        iconKey: "Massage",
+        text: "Sportovní masér",
+        link: "https://google.com",
+      },
+    ],
+  },
+];
+
 export const PROJECTS = [
   {
     title: "E-Commerce Website",
