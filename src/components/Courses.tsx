@@ -10,7 +10,14 @@ import {
 } from "react-icons/fa"; // Specific icons from react-icons
 import { RiReactjsLine } from "react-icons/ri";
 import { SiTypescript, SiJavascript, SiMongodb } from "react-icons/si";
-
+import {
+  FaUserTie,
+  FaRunning,
+  FaDumbbell,
+  FaHandHoldingMedical,
+} from "react-icons/fa";
+import { SiMicrosoftexcel } from "react-icons/si";
+import { GiWhistle } from "react-icons/gi";
 // Object defining icons and background color for each course
 const courseIcons = {
   "React Native": {
@@ -65,6 +72,30 @@ const courseIcons = {
   CSS: {
     icon: <FaCss3Alt className="text-lg text-white" />,
     color: "bg-blue-500", // Barva pro CSS
+  },
+  Management: {
+    icon: <FaUserTie className="text-lg text-white" />,
+    color: "bg-yellow-500",
+  },
+  Coaching: {
+    icon: <GiWhistle className="text-lg text-white" />,
+    color: "bg-green-500",
+  },
+  Excel: {
+    icon: <SiMicrosoftexcel className="text-lg text-white" />,
+    color: "bg-green-700",
+  },
+  Running: {
+    icon: <FaRunning className="text-lg text-white" />,
+    color: "bg-blue-500",
+  },
+  Fitness: {
+    icon: <FaDumbbell className="text-lg text-white" />,
+    color: "bg-orange-500",
+  },
+  Massage: {
+    icon: <FaHandHoldingMedical className="text-lg text-white" />,
+    color: "bg-purple-500",
   },
 };
 
@@ -141,14 +172,18 @@ function Courses() {
                     )}
                   </span>
                   <span>{course.text}</span> {/* Course Text */}
-                  <a
-                    href={course.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="ml-2 text-cyan-300 underline"
-                  >
-                    LINK {/* Link */}
-                  </a>
+                  {course.link === "" ? (
+                    ""
+                  ) : (
+                    <a
+                      href={course.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="ml-2 text-cyan-300 underline"
+                    >
+                      LINK {/* Link */}
+                    </a>
+                  )}
                 </div>
               ))}{" "}
             </motion.div>
