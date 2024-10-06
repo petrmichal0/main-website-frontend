@@ -73,7 +73,7 @@ function About() {
               href="https://www.github.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-16 h-16 rounded-md bg-gray-900 text-white flex justify-center items-center hover:bg-gray-700"
+              className="w-16 h-16 rounded-md bg-white text-gray-900 flex justify-center items-center hover:bg-gray-800 hover:text-white"
               title="GitHub"
             >
               <FaGithub className="w-10 h-10" /> {/* GitHub Icon */}
