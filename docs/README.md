@@ -1,5 +1,3 @@
-# Main Website Frontend
-
 ## Project Title and Description
 Main Website Frontend is a portfolio web application built using modern web technologies. It includes sections for showcasing personal projects, skills, experiences, and providing a way to contact me through a form.
 
