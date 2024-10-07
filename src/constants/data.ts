@@ -1,4 +1,4 @@
-import project1 from "../assets/projects/project-1.jpg";
+import project1 from "../assets/projects/MainWebsiteFrontend.jpg";
 import project2 from "../assets/projects/project-2.jpg";
 import project3 from "../assets/projects/project-3.jpg";
 import project4 from "../assets/projects/project-4.jpg";
@@ -146,14 +146,14 @@ export const COURSES = [
 
 export const PROJECTS = [
   {
-    title: "E-Commerce Website",
+    title: "Main Website Frontend",
     image: project1,
     description:
-      "A fully functional e-commerce website with features like product listing, shopping cart, and user authentication.",
-    technologies: ["HTML", "CSS", "React", "Node.js", "MongoDB"],
-    github: "https://github.com/example/ecommerce",
-    demo: "https://demo-ecommerce.com",
-    documentation: "https://docs-ecommerce.com",
+      "Main Website Frontend is a portfolio web application built using modern web technologies. It includes sections for showcasing personal projects, skills, experiences, and providing a way to contact me through a form.",
+    technologies: ["React", "TypeScript", "Framer Motion", "Tailwindcss"],
+    github: "https://github.com/petrmichal0/main-website-frontend",
+    demo: "https://web-final-v1.netlify.app/",
+    documentation: "https://petrmichal0.github.io/main-website-frontend/",
   },
   {
     title: "Task Management App",
