@@ -1,22 +1,32 @@
-import { useState } from "react";
-import { PROJECTS } from "../constants/data"; // Data for the projects
-import { motion } from "framer-motion"; // Library for animations
-import {
-  FaReact,
-  FaNodeJs,
-  FaCss3Alt,
-  FaHtml5,
-  FaGithub,
-} from "react-icons/fa"; // React Icons for technology logos
+import { RiReactjsLine } from "react-icons/ri";
+import { VscVscode } from "react-icons/vsc";
+import { TbBrandFramerMotion } from "react-icons/tb";
+
 import {
   SiTailwindcss,
+  SiSupabase,
+  SiJavascript,
   SiTypescript,
-  SiRedux,
-  SiVite,
+  SiNetlify,
   SiMongodb,
-} from "react-icons/si"; // Additional React Icons
+} from "react-icons/si";
+import { IoLogoFirebase } from "react-icons/io5";
+import {
+  FaNodeJs,
+  FaHtml5,
+  FaCss3Alt,
+  FaGitAlt,
+  FaGithub,
+  FaFigma,
+} from "react-icons/fa";
+import { SiCanva, SiVite, SiRedux } from "react-icons/si";
+import { BiLogoHeroku } from "react-icons/bi";
+import { motion } from "framer-motion";
+import chatgptImage from "/chatgpt.png"; // Image for the ChatGPT icon
 import { AiOutlineLink } from "react-icons/ai";
 import { BiBook, BiRightArrowAlt } from "react-icons/bi"; // Icons for links and documentation
+import { useState } from "react";
+import { PROJECTS } from "../constants/data";
 
 type TechnologyIcon = {
   icon: JSX.Element; // Defines the type for each technology icon
@@ -30,17 +40,88 @@ type LinkIcon = {
   url?: string; // URL for the link (optional)
 };
 
-// Object that maps technology names to their respective icons and colors
+// Updated object that matches "Technologies" icons and colors
 const technologyIcons: Record<string, TechnologyIcon> = {
-  React: { icon: <FaReact />, color: "bg-cyan-500" },
-  TypeScript: { icon: <SiTypescript />, color: "bg-blue-500" },
-  Vite: { icon: <SiVite />, color: "bg-purple-500" },
-  Redux: { icon: <SiRedux />, color: "bg-purple-700" },
-  TailwindCSS: { icon: <SiTailwindcss />, color: "bg-teal-500" },
-  "Node.js": { icon: <FaNodeJs />, color: "bg-green-500" },
-  MongoDB: { icon: <SiMongodb />, color: "bg-green-600" },
-  CSS: { icon: <FaCss3Alt />, color: "bg-blue-400" },
-  HTML: { icon: <FaHtml5 />, color: "bg-orange-500" },
+  HTML: {
+    icon: <FaHtml5 className="text-lg text-white" />,
+    color: "bg-orange-500",
+  },
+  CSS: {
+    icon: <FaCss3Alt className="text-lg text-white" />,
+    color: "bg-blue-500",
+  },
+  JavaScript: {
+    icon: <SiJavascript className="text-lg text-white" />,
+    color: "bg-yellow-400",
+  },
+  React: {
+    icon: <RiReactjsLine className="text-lg text-white" />,
+    color: "bg-[#0d99ff]",
+  },
+  TypeScript: {
+    icon: <SiTypescript className="text-lg text-white" />,
+    color: "bg-[#3178c6]",
+  },
+  TailwindCSS: {
+    icon: <SiTailwindcss className="text-lg text-white" />,
+    color: "bg-[#2298bd]",
+  },
+  "Framer Motion": {
+    icon: <TbBrandFramerMotion className="text-lg text-white" />,
+    color: "bg-[#bc4a97]",
+  },
+  "Node.js": {
+    icon: <FaNodeJs className="text-lg text-white" />,
+    color: "bg-green-500",
+  },
+  Express: {
+    icon: <span className="text-lg text-white">Ex</span>, // Custom text for Express
+    color: "bg-black",
+  },
+  MongoDB: {
+    icon: <SiMongodb className="text-lg text-white" />,
+    color: "bg-[#4DB33D]",
+  },
+  Supabase: {
+    icon: <SiSupabase className="text-lg text-white" />,
+    color: "bg-[#1e7d52]",
+  },
+  Firebase: {
+    icon: <IoLogoFirebase className="text-lg text-white" />,
+    color: "bg-yellow-500",
+  },
+  Git: {
+    icon: <FaGitAlt className="text-lg text-white" />,
+    color: "bg-red-500",
+  },
+  GitHub: {
+    icon: <FaGithub className="text-lg text-gray-900" />,
+    color: "bg-white",
+  },
+  VSCode: {
+    icon: <VscVscode className="text-lg text-white" />,
+    color: "bg-[#30a3f1]",
+  },
+  GPT: {
+    icon: <img src={chatgptImage} alt="ChatGPT" className="w-8 h-8" />,
+    color: "bg-gray-800",
+  },
+  Heroku: {
+    icon: <BiLogoHeroku className="text-lg text-white" />,
+    color: "bg-indigo-600",
+  },
+  Netlify: {
+    icon: <SiNetlify className="text-lg text-white" />,
+    color: "bg-[#05bdba]",
+  },
+  Figma: {
+    icon: <FaFigma className="text-lg text-white" />,
+    color: "bg-[#f24e1e]",
+  },
+  Redux: {
+    icon: <SiRedux className="text-lg text-white" />,
+    color: "bg-[#764ABC]", // Fialová barva pro Redux
+  },
 };
 
 // Object for different types of project links like GitHub, Demo, and Documentation
@@ -55,7 +136,7 @@ const linkIcons: Record<string, LinkIcon> = {
 };
 
 // Filter options for projects (to filter by technology)
-const filterOptions = ["All", "React", "Node.js", "Angular", "Vue.js"];
+const filterOptions = ["All", "React", "React Native", "TypeScript", "Node.js"];
 
 function Projects() {
   const [activeFilter, setActiveFilter] = useState("All"); // State for the active filter

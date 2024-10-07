@@ -72,8 +72,8 @@ const technologyIcons = {
     color: "bg-green-500", // Green background for Node.js
   },
   Express: {
-    icon: <span className="text-2xl font-bold text-white">Express</span>, // Custom text for Express
-    color: "bg-gray-800", // Gray background for Express
+    icon: <span className="text-5xl font-bold text-white">Ex</span>, // Custom text for Express
+    color: "bg-black", // Gray background for Express
   },
   MongoDB: {
     icon: <SiMongodb className="text-7xl text-white" />,

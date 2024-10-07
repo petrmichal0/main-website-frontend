@@ -1,7 +1,21 @@
 import project1 from "../assets/projects/MainWebsiteFrontend.jpg";
-import project2 from "../assets/projects/project-2.jpg";
-import project3 from "../assets/projects/project-3.jpg";
-import project4 from "../assets/projects/project-4.jpg";
+import project2 from "../assets/projects/Backend.jpg";
+import project3 from "../assets/projects/WorldWise.jpg";
+import project4 from "../assets/projects/BillSplit.jpg";
+import project5 from "../assets/projects/ReactQuiz.jpg";
+import project6 from "../assets/projects/Calculator.jpg";
+import project7 from "../assets/projects/Hangman.jpg";
+import project8 from "../assets/projects/WeatherAppFrontend.jpg";
+import project9 from "../assets/projects/Backend.jpg";
+import project10 from "../assets/projects/Goals.jpg";
+import project11 from "../assets/projects/Timer.jpg";
+import project12 from "../assets/projects/ReduxShop.jpg";
+import project13 from "../assets/projects/MemoryCards.jpg";
+import project14 from "../assets/projects/Movies.jpg";
+import project15 from "../assets/projects/FlashCards.jpg";
+import project16 from "../assets/projects/Traveling.jpg";
+import project17 from "../assets/projects/TicTacToe.jpg";
+import project18 from "../assets/projects/Pizza.jpg";
 
 export const HERO_CONTENT: string = `I love technical challenges and finding good solutions. What started as a hobby with my first programming attempt quickly became a path I want to follow in my career. I focus on creating applications from design to final product, using modern technologies and an innovative approach.`;
 
@@ -150,40 +164,180 @@ export const PROJECTS = [
     image: project1,
     description:
       "Main Website Frontend is a portfolio web application built using modern web technologies. It includes sections for showcasing personal projects, skills, experiences, and providing a way to contact me through a form.",
-    technologies: ["React", "TypeScript", "Framer Motion", "Tailwindcss"],
+    technologies: ["React", "TypeScript", "Framer Motion", "TailwindCSS"],
     github: "https://github.com/petrmichal0/main-website-frontend",
     demo: "https://web-final-v1.netlify.app/",
     documentation: "https://petrmichal0.github.io/main-website-frontend/",
   },
   {
-    title: "Task Management App",
+    title: "Main Website Backend",
     image: project2,
     description:
-      "An application for managing tasks and projects, with features such as task creation, assignment, and progress tracking.",
-    technologies: ["HTML", "CSS", "Angular", "Firebase"],
-    github: "https://github.com/example/task-manager",
-    demo: "https://demo-taskmanager.com",
-    documentation: "https://docs-taskmanager.com",
+      "Main Website Backend is a server-side application that handles contact form submissions. It sends emails to the site administrator using Nodemailer. The API handles email sending requests from the frontend.",
+    technologies: ["Node.js", "Express"],
+    github: "https://github.com/petrmichal0/main-website-backend/tree/main",
+    demo: "",
+    documentation: "https://petrmichal0.github.io/main-website-backend/",
   },
   {
-    title: "Portfolio Website",
+    title: "World Wise",
     image: project3,
     description:
-      "A personal portfolio website showcasing projects, skills, and contact information.",
-    technologies: ["HTML", "CSS", "React", "Bootstrap"],
-    github: "https://github.com/example/portfolio",
-    demo: "https://demo-portfolio.com",
-    documentation: "https://docs-portfolio.com",
+      "WorldWise is an interactive web application designed to track your travel adventures. Users can add cities they visited, explore city details, and visualize their travels on a world map.",
+    technologies: ["React"],
+    github: "https://github.com/petrmichal0/world-wise",
+    demo: "https://worldmapv1.netlify.app/",
+    documentation: "https://petrmichal0.github.io/world-wise/",
   },
   {
-    title: "Blogging Platform",
+    title: "Bill Split",
     image: project4,
     description:
-      "A platform for creating and publishing blog posts, with features like rich text editing, commenting, and user profiles.",
-    technologies: ["HTML", "CSS", "Vue.js", "Express", "mySQL"],
-    github: "https://github.com/example/blog-platform",
-    demo: "https://demo-blogplatform.com",
-    documentation: "https://docs-blogplatform.com",
+      "Bill-Split is a web application designed to help users split bills and manage balances with friends. Users can add friends, track balances, and split bills with ease.",
+    technologies: ["React"],
+    github: "https://github.com/petrmichal0/bill-split",
+    demo: "https://billsplitfriends.netlify.app/",
+    documentation: "https://petrmichal0.github.io/bill-split/",
+  },
+  {
+    title: "The React Quiz",
+    image: project5,
+    description:
+      "The React Quiz is an interactive web-based quiz application designed to test users' knowledge of React, a popular JavaScript library. The quiz consists of multiple questions, tracking scores, high scores, and allows users to restart the quiz or finish it once they have answered all questions.",
+    technologies: ["React"],
+    github: "https://github.com/petrmichal0/Quiz_final",
+    demo: "https://v1-quiz.netlify.app/",
+    documentation: "https://petrmichal0.github.io/bill-split/",
+  },
+  {
+    title: "Calculater",
+    image: project6,
+    description:
+      "Calculater is a web application designed to perform basic arithmetic calculations with a user-friendly interface. It allows users to add, subtract, multiply, and divide numbers with ease.",
+    technologies: ["React"],
+    github: "https://github.com/petrmichal0/Calculater2024",
+    demo: "https://calculater-v1.netlify.app/",
+    documentation: "https://petrmichal0.github.io/Calculater2024/",
+  },
+  {
+    title: "Hangman",
+    image: project7,
+    description:
+      "Calculater is a web application designed to perform basic arithmetic calculations with a user-friendly interface. It allows users to add, subtract, multiply, and divide numbers with ease.",
+    technologies: ["React", "TypeScript"],
+    github: "https://github.com/petrmichal0/hangman",
+    demo: "https://hangman2024.netlify.app/",
+    documentation: "https://petrmichal0.github.io/hangman/",
+  },
+  {
+    title: "Weather App Frontend",
+    image: project8,
+    description:
+      "WeatherApp is a web application designed to provide weather information to users. It allows users to search for current weather conditions and forecasts for specific locations. The application offers user-friendly interfaces for login, registration, and weather data display.",
+    technologies: ["React", "TailwindCSS"],
+    github: "https://github.com/petrmichal0/weatherapp-frontend",
+    demo: "https://my-weatherapp-frontend-9e993cefb36f.herokuapp.com/Prague",
+    documentation: "https://petrmichal0.github.io/weatherapp-frontend/",
+  },
+  {
+    title: "Weather App Backend",
+    image: project9,
+    description:
+      "WeatherApp Backend is the server-side application that provides API endpoints for the WeatherApp frontend. It handles user authentication, weather data retrieval, and various other backend functionalities.",
+    technologies: ["Node.js", "Express", "MongoDB"],
+    github: "https://github.com/petrmichal0/weatherapp-backend",
+    demo: "",
+    documentation: "https://petrmichal0.github.io/weatherapp-backend/",
+  },
+  {
+    title: "Goals",
+    image: project10,
+    description:
+      "Goals is a web application designed to help users set, track, and achieve their goals. Users can create new goals, view a list of their current goals, and mark goals as completed.",
+    technologies: ["React", "TypeScript"],
+    github: "https://github.com/petrmichal0/Goals",
+    demo: "https://thegoals.netlify.app/",
+    documentation: "https://petrmichal0.github.io/Goals/",
+  },
+  {
+    title: "Timer",
+    image: project11,
+    description:
+      "Timer is a web application designed to help users set, manage, and track multiple timers. Users can add new timers, edit existing ones, and keep track of their remaining time.",
+    technologies: ["React", "TypeScript"],
+    github: "https://github.com/petrmichal0/Timer",
+    demo: "https://react-timers.netlify.app/",
+    documentation: "https://petrmichal0.github.io/Timer/",
+  },
+  {
+    title: "Redux Shop",
+    image: project12,
+    description:
+      "Redux-shop is a web application designed to provide a shopping experience with cart management. Users can browse products, add them to their cart, and view the cart's contents.",
+    technologies: ["React", "TypeScript", "Redux"],
+    github: "https://github.com/petrmichal0/Redux-shop",
+    demo: "https://redux-shop-react-type.netlify.app/",
+    documentation: "https://petrmichal0.github.io/Redux-shop/",
+  },
+  {
+    title: "Memory Cards",
+    image: project13,
+    description:
+      "Memory Cards is an application for practicing memory using memory cards.",
+    technologies: ["React"],
+    github: "https://github.com/petrmichal0/memory_cards",
+    demo: "https://memory-cards-v1.netlify.app/",
+    documentation: "https://petrmichal0.github.io/memory_cards/",
+  },
+  {
+    title: "Movies",
+    image: project14,
+    description:
+      "Movies is a web application that allows users to search for movies, view details, and manage their watched movies list.",
+    technologies: ["React"],
+    github: "https://github.com/petrmichal0/Movies",
+    demo: "https://v1-movies.netlify.app/",
+    documentation: "https://petrmichal0.github.io/Movies/",
+  },
+  {
+    title: "Flash Card",
+    image: project15,
+    description:
+      "FlashCard is a web application designed to help users create, manage, and study flashcards. Users can easily add new flashcards, edit existing ones, and quiz themselves on various topics.",
+    technologies: ["React"],
+    github: "https://github.com/petrmichal0/FlashCard",
+    demo: "https://flashcards-v1.netlify.app/",
+    documentation: "https://petrmichal0.github.io/FlashCard/",
+  },
+  {
+    title: "Traveling",
+    image: project16,
+    description:
+      "Traveling is a user-friendly web application that helps users create and manage packing lists for their vacations. Users can easily add items to their lists, filter them, check them off as they are packed, remove items, and clear the entire list when needed.",
+    technologies: ["React"],
+    github: "https://github.com/petrmichal0/Traveling",
+    demo: "https://travelinglist.netlify.app/",
+    documentation: "https://petrmichal0.github.io/Traveling/",
+  },
+  {
+    title: "Tic Tac Toe",
+    image: project17,
+    description:
+      "Tic Tac Toe is a web application that allows users to play the classic Tic Tac Toe game against another player.",
+    technologies: ["React"],
+    github: "https://github.com/petrmichal0/Tic_tac_toe",
+    demo: "https://tic-tac-toe-v11.netlify.app/",
+    documentation: "https://petrmichal0.github.io/Tic_tac_toe/",
+  },
+  {
+    title: "Pizza",
+    image: project18,
+    description:
+      "Pizza is a web application designed to manage a pizza restaurant's menu, orders, and user information. Users can browse the menu, place orders, and track their orders.",
+    technologies: ["React", "TailwindCSS", "Redux"],
+    github: "https://github.com/petrmichal0/pizza",
+    demo: "https://pizza-2023.netlify.app/",
+    documentation: "https://petrmichal0.github.io/pizza/",
   },
 ];
 

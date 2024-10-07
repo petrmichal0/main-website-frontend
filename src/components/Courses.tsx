@@ -33,8 +33,12 @@ const courseIcons = {
     color: "bg-green-500", // Barva pro Node.js
   },
   Express: {
-    icon: <span className="text-lg text-white">Express</span>, // Express nemá vlastní ikonu, použij text
-    color: "bg-gray-800", // Barva pro Express
+    icon: (
+      <span className="text-lg text-white flex items-center justify-center rounded-full w-9 h-9 bg-gray-800">
+        Ex
+      </span>
+    ), // Custom text for Express, styled as a rounded icon
+    color: "", // Background color is set directly in the icon
   },
   MongoDB: {
     icon: <SiMongodb className="text-lg text-white" />,
