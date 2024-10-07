@@ -130,6 +130,10 @@ All API endpoints and detailed documentation on how to interact with the backend
   </tr>
 </table>
 
+## Demo (link)
+
+Check out the live demo of the application [here](https://web-final-v1.netlify.app/).
+
 
 ## Project Structure
 
