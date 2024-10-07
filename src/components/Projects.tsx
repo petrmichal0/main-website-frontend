@@ -160,7 +160,9 @@ function Projects() {
             {/* Project Title and Description */}
             <div className="flex-grow">
               <h6 className="font-semibold text-lg mb-2">{project.title}</h6>
-              <p className="text-neutral-400 mb-4">{project.description}</p>
+              <p className="text-neutral-400 mb-4 text-xs">
+                {project.description}
+              </p>
             </div>
 
             {/* Technologies Used in the Project */}
