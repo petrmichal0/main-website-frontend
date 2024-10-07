@@ -81,13 +81,19 @@ All API endpoints and detailed documentation on how to interact with the backend
   </tr>
   <tr>
     <td style="border: 1px solid black; width: 310px; height: 310px; text-align: center;">
-      <img src="https://github.com/user-attachments/assets/2d360bc8-d14d-4d2a-8b2a-30d3786a1363" width="300" height="300" alt="Homepage">
+      <a href="https://github.com/user-attachments/assets/2d360bc8-d14d-4d2a-8b2a-30d3786a1363" target="_blank">
+        <img src="https://github.com/user-attachments/assets/2d360bc8-d14d-4d2a-8b2a-30d3786a1363" width="300" height="300" alt="Homepage">
+      </a>
     </td>
     <td style="border: 1px solid black; width: 310px; height: 310px; text-align: center;">
-      <img src="https://github.com/user-attachments/assets/4b273dfc-95e0-499a-9f60-75c6d49f24ca" width="300" height="300" alt="Log in">
+      <a href="https://github.com/user-attachments/assets/4b273dfc-95e0-499a-9f60-75c6d49f24ca" target="_blank">
+        <img src="https://github.com/user-attachments/assets/4b273dfc-95e0-499a-9f60-75c6d49f24ca" width="300" height="300" alt="About">
+      </a>
     </td>
     <td style="border: 1px solid black; width: 310px; height: 310px; text-align: center;">
-      <img src="https://github.com/user-attachments/assets/67cd1c5d-72a7-4ee9-8416-b0b8fce89db9" width="300" height="300" alt="Sign up">
+      <a href="https://github.com/user-attachments/assets/67cd1c5d-72a7-4ee9-8416-b0b8fce89db9" target="_blank">
+        <img src="https://github.com/user-attachments/assets/67cd1c5d-72a7-4ee9-8416-b0b8fce89db9" width="300" height="300" alt="Technologies">
+      </a>
     </td>
   </tr>
   <tr>
@@ -97,24 +103,33 @@ All API endpoints and detailed documentation on how to interact with the backend
   </tr>
   <tr>
     <td style="border: 1px solid black; width: 310px; height: 310px; text-align: center;">
-      <img src="https://github.com/user-attachments/assets/45719f1c-341e-4a21-987c-ebf5e1c02aec" width="300" height="300" alt="After login">
+      <a href="https://github.com/user-attachments/assets/45719f1c-341e-4a21-987c-ebf5e1c02aec" target="_blank">
+        <img src="https://github.com/user-attachments/assets/45719f1c-341e-4a21-987c-ebf5e1c02aec" width="300" height="300" alt="Experience">
+      </a>
     </td>
     <td style="border: 1px solid black; width: 310px; height: 310px; text-align: center;">
-      <img src="https://github.com/user-attachments/assets/8d8c6bcd-07a7-4832-a31c-cdbe09d88c2a" width="300" height="300" alt="Favorite Cities">
+      <a href="https://github.com/user-attachments/assets/8d8c6bcd-07a7-4832-a31c-cdbe09d88c2a" target="_blank">
+        <img src="https://github.com/user-attachments/assets/8d8c6bcd-07a7-4832-a31c-cdbe09d88c2a" width="300" height="300" alt="Courses">
+      </a>
     </td>
-     <td style="border: 1px solid black; width: 310px; height: 310px; text-align: center;">
-      <img src="https://github.com/user-attachments/assets/1a33df49-2968-4d7e-9893-08636e3545a2" width="300" height="300" alt="Forgot Password">
-    </td>
-  </tr>
-    <tr>
-    <th>Contact</th>  
-  </tr>
-    <tr>
     <td style="border: 1px solid black; width: 310px; height: 310px; text-align: center;">
-      <img src="https://github.com/user-attachments/assets/fb708f1b-436a-4d88-bd60-9696d2a20c12" width="300" height="300" alt="After login">
+      <a href="https://github.com/user-attachments/assets/1a33df49-2968-4d7e-9893-08636e3545a2" target="_blank">
+        <img src="https://github.com/user-attachments/assets/1a33df49-2968-4d7e-9893-08636e3545a2" width="300" height="300" alt="Forgot Password">
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <th>Contact</th>
+  </tr>
+  <tr>
+    <td style="border: 1px solid black; width: 310px; height: 310px; text-align: center;">
+      <a href="https://github.com/user-attachments/assets/fb708f1b-436a-4d88-bd60-9696d2a20c12" target="_blank">
+        <img src="https://github.com/user-attachments/assets/fb708f1b-436a-4d88-bd60-9696d2a20c12" width="300" height="300" alt="Contact">
+      </a>
     </td>
   </tr>
 </table>
+
 
 ## Project Structure
 
