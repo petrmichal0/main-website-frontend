@@ -16,7 +16,7 @@ Main Website Frontend is a portfolio web application built using modern web tech
 - [Usage](#usage)
 - [Backend Information](#backend-information)
 - [Screenshots](#screenshots)
-- [Demo (link)](#demo-(link))
+- [Demo (link)](#demo-link)
 - [Project Structure](#project-structure)
 - [Technologies Used](#technologies-used)
 - [Third-Party Libraries](#third-party-libraries)
@@ -131,7 +131,7 @@ All API endpoints and detailed documentation on how to interact with the backend
   </tr>
 </table>
 
-## Demo (link)
+## Demo Link
 
 Check out the live demo of the application [here](https://web-final-v1.netlify.app/).
 
