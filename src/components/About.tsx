@@ -48,7 +48,7 @@ function About() {
           <div className="flex justify-center lg:justify-start space-x-4 mt-6">
             {/* Facebook Icon */}
             <a
-              href="https://www.facebook.com"
+              href="https://www.facebook.com/profile.php?id=100005710067699"
               target="_blank"
               rel="noopener noreferrer" // Ensures security when opening external links
               className="w-16 h-16 rounded-md bg-blue-600 text-white flex justify-center items-center hover:bg-blue-800" // Button with hover effect
@@ -59,7 +59,7 @@ function About() {
 
             {/* LinkedIn Icon */}
             <a
-              href="https://www.linkedin.com"
+              href="https://www.linkedin.com/in/petr-michal-68b5a3245/"
               target="_blank"
               rel="noopener noreferrer"
               className="w-16 h-16 rounded-md bg-blue-500 text-white flex justify-center items-center hover:bg-blue-700"
@@ -70,7 +70,7 @@ function About() {
 
             {/* GitHub Icon */}
             <a
-              href="https://www.github.com"
+              href="https://github.com/petrmichal0"
               target="_blank"
               rel="noopener noreferrer"
               className="w-16 h-16 rounded-md bg-white text-gray-900 flex justify-center items-center hover:bg-gray-800 hover:text-white"
