@@ -125,37 +125,38 @@ export const COURSES = [
   {
     year: "2009 - 2020",
     courses: [
-      {
-        iconKey: "Management",
-        text: "Rozvoj manažerských dovedností",
-        link: "",
-      },
-      {
-        iconKey: "Coaching",
-        text: "Vzdělávací program 'Koučovací styl vedení'",
-        link: "",
-      },
-      {
-        iconKey: "Excel",
-        text: "MS Excel Pokročilý - Gopas",
-        link: "",
-      },
-      {
-        iconKey: "Running",
-        text: "Trenér kondičního běhu 3. třídy",
-        link: "",
-      },
-      {
-        iconKey: "Fitness",
-        text: "Fitness trenér",
-        link: "",
-      },
-      {
-        iconKey: "Massage",
-        text: "Sportovní masér",
-        link: "",
-      },
-    ],
+  {
+    iconKey: "Management",
+    text: "Development of management skills",
+    link: "",
+  },
+  {
+    iconKey: "Coaching",
+    text: "Educational program 'Coaching leadership style'",
+    link: "",
+  },
+  {
+    iconKey: "Excel",
+    text: "MS Excel Advanced - Gopas",
+    link: "",
+  },
+  {
+    iconKey: "Running",
+    text: "Fitness running coach, level 3",
+    link: "",
+  },
+  {
+    iconKey: "Fitness",
+    text: "Fitness trainer",
+    link: "",
+  },
+  {
+    iconKey: "Massage",
+    text: "Sports massage therapist",
+    link: "",
+  },
+],
+
   },
 ];
 
