@@ -59,7 +59,7 @@ function About() {
 
             {/* LinkedIn Icon */}
             <a
-              href="https://www.linkedin.com/in/petr-michal-68b5a3245/"
+              href="www.linkedin.com/in/petr-michal-68b5a3245/"
               target="_blank"
               rel="noopener noreferrer"
               className="w-16 h-16 rounded-md bg-blue-500 text-white flex justify-center items-center hover:bg-blue-700"
