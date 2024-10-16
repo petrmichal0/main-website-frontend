@@ -18,6 +18,7 @@ import {
   FaGitAlt,
   FaGithub,
   FaFigma,
+  FaEnvelope,
 } from "react-icons/fa";
 import { SiCanva } from "react-icons/si";
 import { BiLogoHeroku } from "react-icons/bi";
@@ -118,6 +119,10 @@ const technologyIcons = {
   Canva: {
     icon: <SiCanva className="text-7xl text-white" />,
     color: "bg-[#00c4cc]", // Teal background for Canva
+  },
+  Postman: {
+    icon: <FaEnvelope className="text-7xl text-white" />, 
+    color: "bg-orange-500", // Orange background for Postman
   },
 };
 
