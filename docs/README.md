@@ -97,7 +97,7 @@ All API endpoints and detailed documentation on how to interact with the backend
   <tr>
     <th>Experience</th>
     <th>Courses</th>
-    <th>Forgot Password</th>
+    <th>Projects</th>
   </tr>
   <tr>
     <td style="border: 1px solid black; width: 310px; height: 310px; text-align: center;">
