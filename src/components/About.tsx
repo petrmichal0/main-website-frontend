@@ -46,17 +46,6 @@ function About() {
 
           {/* Social Media Icons Section */}
           <div className="flex justify-center lg:justify-start space-x-4 mt-6">
-            {/* Facebook Icon */}
-            <a
-              href="https://www.facebook.com/profile.php?id=100005710067699"
-              target="_blank"
-              rel="noopener noreferrer" // Ensures security when opening external links
-              className="w-16 h-16 rounded-md bg-blue-600 text-white flex justify-center items-center hover:bg-blue-800" // Button with hover effect
-              title="Facebook"
-            >
-              <FaFacebook className="w-10 h-10" /> {/* Facebook Icon */}
-            </a>
-
             {/* LinkedIn Icon */}
             <a
               href="https://www.linkedin.com/in/petr-michal-68b5a3245/"
