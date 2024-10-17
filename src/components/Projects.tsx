@@ -9,6 +9,7 @@ import {
   SiTypescript,
   SiNetlify,
   SiMongodb,
+  SiExpo,
 } from "react-icons/si";
 import { IoLogoFirebase } from "react-icons/io5";
 import {
@@ -121,6 +122,10 @@ const technologyIcons: Record<string, TechnologyIcon> = {
   Redux: {
     icon: <SiRedux className="text-lg text-white" />,
     color: "bg-[#764ABC]", // Fialová barva pro Redux
+  },
+  Expo: {
+    icon: <SiExpo className="text-lg text-white" />,
+    color: "bg-black", 
   },
 };
 
