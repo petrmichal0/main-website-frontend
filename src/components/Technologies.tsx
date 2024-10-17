@@ -10,6 +10,7 @@ import {
   SiNetlify,
   SiMongodb,
   SiPostman,
+  SiExpo,
 } from "react-icons/si";
 import { IoLogoFirebase } from "react-icons/io5";
 import {
@@ -123,6 +124,10 @@ const technologyIcons = {
   Postman: {
     icon: <SiPostman className="text-7xl text-white" />, 
     color: "bg-orange-500", // Orange background for Postman
+  },
+  Expo: {
+    icon: <SiExpo className="text-lg text-white" />,
+    color: "bg-black", 
   },
 };
 
