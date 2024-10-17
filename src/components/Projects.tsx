@@ -127,6 +127,10 @@ const technologyIcons: Record<string, TechnologyIcon> = {
     icon: <SiExpo className="text-lg text-white" />,
     color: "bg-black", 
   },
+  "React Native": {
+    icon: <RiReactjsLine className="text-lg text-white" />,
+    color: "bg-[#0d99ff]",
+  },
 };
 
 // Object for different types of project links like GitHub, Demo, and Documentation
