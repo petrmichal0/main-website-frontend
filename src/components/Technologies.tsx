@@ -126,7 +126,7 @@ const technologyIcons = {
     color: "bg-orange-500", // Orange background for Postman
   },
   Expo: {
-    icon: <SiExpo className="text-lg text-white" />,
+    icon: <SiExpo className="text-7xl text-white" />,
     color: "bg-black", 
   },
 };
