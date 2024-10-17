@@ -17,6 +17,7 @@ import project16 from "../assets/projects/Traveling.jpg";
 import project17 from "../assets/projects/TicTacToe.jpg";
 import project18 from "../assets/projects/Pizza.jpg";
 import project19 from "../assets/projects/MainWebsiteV2.jpg";
+import project20 from "../assets/projects/MyRecipeBook.jpg";
 
 export const HERO_CONTENT: string = `I love technical challenges and finding good solutions. What started as a hobby with my first programming attempt quickly became a path I want to follow in my career. I focus on creating applications from design to final product, using modern technologies and an innovative approach.`;
 
@@ -350,6 +351,16 @@ export const PROJECTS = [
     github: "https://github.com/petrmichal0/main-website-v2/tree/main",
     demo: "https://main-website-v2.netlify.app/",
     documentation: "https://petrmichal0.github.io/main-website-v2/",
+  },
+  {
+    title: "My Recipe Book",
+    image: project20,
+    description:
+      "My Recipe Book is a React Native application that allows users to explore and manage recipes with an easy-to-use interface. The app provides features like recipe categories, detailed views, and favorite recipes management.",
+    technologies: ["React Native", "Expo"],
+    github: "https://github.com/petrmichal0/my-recipe-book",
+    demo: "https://snack.expo.dev/@petrmichal0/my-recipe-book-v1?platform=android",
+    documentation: "https://petrmichal0.github.io/my-recipe-book/",
   },
 ];
 
