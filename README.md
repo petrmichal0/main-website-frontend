@@ -7,7 +7,7 @@ Main Website Frontend is a portfolio web application built using modern web tech
 ![Static Badge](https://img.shields.io/badge/status-online-brightgreen)
 
 ## Quick Look
-<img src="https://github.com/user-attachments/assets/a606a869-84c8-4cf3-ae7f-f09a2f204119" width="700" alt="WeatherApp Demo">
+<img src="https://github.com/user-attachments/assets/649f4696-6304-47ad-8e13-ad3fdf433827" width="700" alt="WeatherApp Demo">
 
 ## Table of Content
 - [Project Title and Description](#project-title-and-description)
