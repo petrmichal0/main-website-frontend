@@ -5,7 +5,7 @@ Main Website Frontend is a portfolio web application built using modern web tech
 ![Static Badge](https://img.shields.io/badge/status-online-brightgreen)
 
 ## Quick Look
-<img src="https://github.com/user-attachments/assets/a606a869-84c8-4cf3-ae7f-f09a2f204119" width="700" alt="WeatherApp Demo">
+<img src="https://github.com/user-attachments/assets/649f4696-6304-47ad-8e13-ad3fdf433827" width="700" alt="WeatherApp Demo">
 
 ## Table of Content
 - [Project Title and Description](#project-title-and-description)
@@ -14,6 +14,7 @@ Main Website Frontend is a portfolio web application built using modern web tech
 - [Usage](#usage)
 - [Backend Information](#backend-information)
 - [Screenshots](#screenshots)
+- [Demo (link)](#demo-link)
 - [Project Structure](#project-structure)
 - [Technologies Used](#technologies-used)
 - [Third-Party Libraries](#third-party-libraries)
@@ -84,13 +85,13 @@ All API endpoints and detailed documentation on how to interact with the backend
       </a>
     </td>
     <td style="border: 1px solid black; width: 310px; height: 310px; text-align: center;">
-      <a href="https://github.com/user-attachments/assets/4b273dfc-95e0-499a-9f60-75c6d49f24ca" target="_blank">
-        <img src="https://github.com/user-attachments/assets/4b273dfc-95e0-499a-9f60-75c6d49f24ca" width="300" height="300" alt="About">
+      <a href="https://github.com/user-attachments/assets/b6753479-f2e2-41e9-94b5-4201fe14376f" target="_blank">
+        <img src="https://github.com/user-attachments/assets/b6753479-f2e2-41e9-94b5-4201fe14376f" width="300" height="300" alt="About">
       </a>
     </td>
     <td style="border: 1px solid black; width: 310px; height: 310px; text-align: center;">
-      <a href="https://github.com/user-attachments/assets/67cd1c5d-72a7-4ee9-8416-b0b8fce89db9" target="_blank">
-        <img src="https://github.com/user-attachments/assets/67cd1c5d-72a7-4ee9-8416-b0b8fce89db9" width="300" height="300" alt="Technologies">
+      <a href="https://github.com/user-attachments/assets/4cc3ff05-2575-45ed-a8df-68c59b2ec1a0" target="_blank">
+        <img src="https://github.com/user-attachments/assets/4cc3ff05-2575-45ed-a8df-68c59b2ec1a0" width="300" height="300" alt="Technologies">
       </a>
     </td>
   </tr>
@@ -101,18 +102,18 @@ All API endpoints and detailed documentation on how to interact with the backend
   </tr>
   <tr>
     <td style="border: 1px solid black; width: 310px; height: 310px; text-align: center;">
-      <a href="https://github.com/user-attachments/assets/45719f1c-341e-4a21-987c-ebf5e1c02aec" target="_blank">
-        <img src="https://github.com/user-attachments/assets/45719f1c-341e-4a21-987c-ebf5e1c02aec" width="300" height="300" alt="Experience">
+      <a href="https://github.com/user-attachments/assets/22c5df81-a862-4273-9453-d43d9147c257" target="_blank">
+        <img src="https://github.com/user-attachments/assets/22c5df81-a862-4273-9453-d43d9147c257" width="300" height="300" alt="Experience">
       </a>
     </td>
     <td style="border: 1px solid black; width: 310px; height: 310px; text-align: center;">
-      <a href="https://github.com/user-attachments/assets/8d8c6bcd-07a7-4832-a31c-cdbe09d88c2a" target="_blank">
-        <img src="https://github.com/user-attachments/assets/8d8c6bcd-07a7-4832-a31c-cdbe09d88c2a" width="300" height="300" alt="Courses">
+      <a href="https://github.com/user-attachments/assets/04851b57-27a2-4f5d-bdc8-f37057f60ab2" target="_blank">
+        <img src="https://github.com/user-attachments/assets/04851b57-27a2-4f5d-bdc8-f37057f60ab2" width="300" height="300" alt="Courses">
       </a>
     </td>
     <td style="border: 1px solid black; width: 310px; height: 310px; text-align: center;">
-      <a href="https://github.com/user-attachments/assets/1a33df49-2968-4d7e-9893-08636e3545a2" target="_blank">
-        <img src="https://github.com/user-attachments/assets/1a33df49-2968-4d7e-9893-08636e3545a2" width="300" height="300" alt="Forgot Password">
+      <a href="https://github.com/user-attachments/assets/1e61e4db-2841-4fae-b45b-059380e467a7" target="_blank">
+        <img src="https://github.com/user-attachments/assets/1e61e4db-2841-4fae-b45b-059380e467a7" width="300" height="300" alt="Forgot Password">
       </a>
     </td>
   </tr>
@@ -121,14 +122,14 @@ All API endpoints and detailed documentation on how to interact with the backend
   </tr>
   <tr>
     <td style="border: 1px solid black; width: 310px; height: 310px; text-align: center;">
-      <a href="https://github.com/user-attachments/assets/fb708f1b-436a-4d88-bd60-9696d2a20c12" target="_blank">
-        <img src="https://github.com/user-attachments/assets/fb708f1b-436a-4d88-bd60-9696d2a20c12" width="300" height="300" alt="Contact">
+      <a href="https://github.com/user-attachments/assets/ae1d35a4-ef09-443f-b5b9-8f050546e906" target="_blank">
+        <img src="https://github.com/user-attachments/assets/ae1d35a4-ef09-443f-b5b9-8f050546e906" width="300" height="300" alt="Contact">
       </a>
     </td>
   </tr>
 </table>
 
-## Demo (link)
+## Demo Link
 
 Check out the live demo of the application [here](https://web-final-v1.netlify.app/).
 
@@ -182,4 +183,4 @@ main-website-frontend/
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT) - see the LICENSE file for details.
