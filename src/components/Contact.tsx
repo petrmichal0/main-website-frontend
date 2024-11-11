@@ -1,51 +1,65 @@
-import { CONTACT } from "../constants/data"; // Importing contact information from constants
-import { motion } from "framer-motion"; // Importing motion for animations from framer-motion
-import { useState } from "react"; // Importing useState hook for state management
-import axios from "axios"; // Importing axios for making HTTP requests
-import { FaSpinner } from "react-icons/fa"; // Importing spinner icon for loading state
+import { CONTACT } from "../constants/data";
+import { motion } from "framer-motion";
+import { useState } from "react";
+import axios from "axios";
+import { FaSpinner } from "react-icons/fa";
+
+const headingAnimation = {
+  whileInView: { opacity: 1, y: 0 },
+  initial: { opacity: 0, y: -100 },
+  transition: { duration: 1.5 },
+};
+
+const textAnimationLeft = {
+  whileInView: { opacity: 1, x: 0 },
+  initial: { opacity: 0, x: -100 },
+  transition: { duration: 0.5 },
+};
+
+const textAnimationRight = {
+  whileInView: { opacity: 1, x: 0 },
+  initial: { opacity: 0, x: 100 },
+  transition: { duration: 0.5 },
+};
 
 function Contact() {
-  // State variables to manage form inputs and states
-  const [email, setEmail] = useState(""); // Stores the email entered by the user
-  const [message, setMessage] = useState(""); // Stores the message entered by the user
-  const [error, setError] = useState(""); // Stores any error messages during submission
-  const [status, setStatus] = useState(""); // Stores success status message after submission
-  const [isLoading, setIsLoading] = useState(false); // Indicates if the form is currently being submitted
-  const maxLength = 500; // Maximum allowed characters for the message
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [error, setError] = useState("");
+  const [status, setStatus] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const maxLength = 500;
 
-  // Function to handle form submission
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault(); // Prevents the page from refreshing on form submission
+    e.preventDefault();
 
-    // Validate email and message
     if (!email || !message) {
-      setError("Please provide both email and message."); // Show error if either email or message is empty
+      setError("Please provide both email and message.");
       return;
     }
     if (message.length > maxLength) {
-      setError(`Message exceeds ${maxLength} characters.`); // Show error if message exceeds max length
+      setError(`Message exceeds ${maxLength} characters.`);
       return;
     }
 
     try {
-      setIsLoading(true); // Start the loading state when form is being submitted
-      // Send the email and message to the server using axios
+      setIsLoading(true);
       const response = await axios.post(
         "https://main-website-backend-f90ccd0e7203.herokuapp.com/api/contact",
         { email, message }
       );
 
       if (response.status === 200) {
-        setStatus("Your message has been sent!"); // Show success message
-        setEmail(""); // Reset email input field
-        setMessage(""); // Reset message input field
+        setStatus("Your message has been sent!");
+        setEmail("");
+        setMessage("");
       } else {
-        setError("Failed to send message. Please try again."); // Show error if submission fails
+        setError("Failed to send message. Please try again.");
       }
     } catch (error) {
-      setError("Error sending email. Please try again."); // Show error on request failure
+      setError("Error sending email. Please try again.");
     } finally {
-      setIsLoading(false); // End the loading state
+      setIsLoading(false);
     }
   };
 
@@ -53,68 +67,57 @@ function Contact() {
     <div
       id="contact"
       className="border-b border-neutral-900 pb-20 flex flex-col"
-      style={{ minHeight: `calc(100vh - 96px)` }} // Adjust height based on navbar height
+      style={{ minHeight: `calc(100vh - 96px)` }}
     >
-      {/* Section heading with animation */}
       <motion.h1
-        whileInView={{ opacity: 1, y: 0 }} // Animates when it comes into view
-        initial={{ opacity: 0, y: -100 }} // Initially invisible and moved up
-        transition={{ duration: 1.5 }} // Smooth animation over 1.5 seconds
+        {...headingAnimation}
         className="my-20 text-center text-4xl w-full"
       >
-        Contact <span className="text-neutral-500">Me</span>{" "}
-        {/* Contact Me Heading */}
+        Contact <span className="text-neutral-500">Me</span>
       </motion.h1>
 
-      {/* Main content for the contact section */}
       <div className="flex flex-col lg:flex-row lg:justify-start w-full px-6">
-        {/* Left column with contact details */}
-        <div className="w-full lg:w-1/2 p-6 text-center lg:text-right">
-          <p className="mb-4 font-medium">{CONTACT.address}</p> {/* Address */}
-          <p className="mb-4">{CONTACT.phoneNo}</p> {/* Phone number */}
+        <motion.div
+          {...textAnimationLeft}
+          className="w-full lg:w-1/2 p-6 text-center lg:text-right"
+        >
+          <p className="mb-4 font-medium">{CONTACT.address}</p>
+          <p className="mb-4">{CONTACT.phoneNo}</p>
           <a href={`mailto:${CONTACT.email}`} className="border-b">
-            {CONTACT.email} {/* Email link */}
+            {CONTACT.email}
           </a>
-        </div>
+        </motion.div>
 
-        {/* Right column with the contact form */}
-        <div className="w-full lg:w-2/5 p-6">
-          {/* Form submission handling */}
+        <motion.div {...textAnimationRight} className="w-full lg:w-2/5 p-6">
           <form onSubmit={handleSubmit} className="flex flex-col space-y-4">
             <input
               type="email"
               value={email}
-              onChange={(e) => setEmail(e.target.value)} // Updates email state
+              onChange={(e) => setEmail(e.target.value)}
               placeholder="Your Email"
               className="p-3 rounded bg-neutral-700 text-white"
               required
             />
             <textarea
               value={message}
-              onChange={(e) => setMessage(e.target.value)} // Updates message state
-              placeholder={`Your message (max ${maxLength} characters)`} // Placeholder text
+              onChange={(e) => setMessage(e.target.value)}
+              placeholder={`Your message (max ${maxLength} characters)`}
               className="p-3 rounded bg-neutral-700 text-white"
-              maxLength={maxLength} // Limits message length
+              maxLength={maxLength}
               required
             />
-            {error && <p className="text-red-500">{error}</p>}{" "}
-            {/* Error message */}
-            {status && <p className="text-green-500">{status}</p>}{" "}
-            {/* Success message */}
+            {error && <p className="text-red-500">{error}</p>}
+            {status && <p className="text-green-500">{status}</p>}
             <button
               type="submit"
               className="py-3 px-6 rounded bg-cyan-300 text-black hover:bg-cyan-400 flex items-center justify-center space-x-2"
-              disabled={isLoading} // Disable the button when loading
+              disabled={isLoading}
             >
-              {/* Show loading spinner and text when sending */}
-              {isLoading && (
-                <FaSpinner className="animate-spin mr-2" /> // Loading spinner
-              )}
-              <span>{isLoading ? "Sending..." : "Send Message"}</span>{" "}
-              {/* Button text */}
+              {isLoading && <FaSpinner className="animate-spin mr-2" />}
+              <span>{isLoading ? "Sending..." : "Send Message"}</span>
             </button>
           </form>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
