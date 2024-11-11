@@ -19,6 +19,16 @@ import project18 from "../assets/projects/Pizza.jpg";
 import project19 from "../assets/projects/MainWebsiteV2.jpg";
 import project20 from "../assets/projects/MyRecipeBook.jpg";
 
+export const NAV_LINKS = [
+  { section: "hero", label: "Hero" },
+  { section: "about", label: "About" },
+  { section: "technologies", label: "Technologies" },
+  { section: "experience", label: "Experience" },
+  { section: "courses", label: "Courses" },
+  { section: "projects", label: "Projects" },
+  { section: "contact", label: "Contact" },
+];
+
 export const HERO_CONTENT: string = `I love technical challenges and finding good solutions. What started as a hobby with my first programming attempt quickly became a path I want to follow in my career. I focus on creating applications from design to final product, using modern technologies and an innovative approach.`;
 
 export const ABOUT_TEXT: string = `My name is Petr Michal, and I always liked solving technical problems. I started as a team leader, where I learned how to make work processes better. Then, my friend showed me programming, and I found my passion. Step by step, I learned HTML, CSS, JavaScript, React, and Node.js, which helped me understand both frontend and backend development. I also learned to build mobile apps with React Native, so I can bring my applications to mobile devices. Now, I am focusing on OpenAI and exploring how artificial intelligence can improve modern apps. In my free time, I like running, cycling, and hiking.`;
@@ -126,38 +136,37 @@ export const COURSES = [
   {
     year: "2009 - 2020",
     courses: [
-  {
-    iconKey: "Management",
-    text: "Development of management skills",
-    link: "",
-  },
-  {
-    iconKey: "Coaching",
-    text: "Educational program 'Coaching leadership style'",
-    link: "",
-  },
-  {
-    iconKey: "Excel",
-    text: "MS Excel Advanced - Gopas",
-    link: "",
-  },
-  {
-    iconKey: "Running",
-    text: "Fitness running coach, level 3",
-    link: "",
-  },
-  {
-    iconKey: "Fitness",
-    text: "Fitness trainer",
-    link: "",
-  },
-  {
-    iconKey: "Massage",
-    text: "Sports massage therapist",
-    link: "",
-  },
-],
-
+      {
+        iconKey: "Management",
+        text: "Development of management skills",
+        link: "",
+      },
+      {
+        iconKey: "Coaching",
+        text: "Educational program 'Coaching leadership style'",
+        link: "",
+      },
+      {
+        iconKey: "Excel",
+        text: "MS Excel Advanced - Gopas",
+        link: "",
+      },
+      {
+        iconKey: "Running",
+        text: "Fitness running coach, level 3",
+        link: "",
+      },
+      {
+        iconKey: "Fitness",
+        text: "Fitness trainer",
+        link: "",
+      },
+      {
+        iconKey: "Massage",
+        text: "Sports massage therapist",
+        link: "",
+      },
+    ],
   },
 ];
 
@@ -177,7 +186,7 @@ export const PROJECTS = [
     image: project2,
     description:
       "Main Website Backend is a server-side application that handles contact form submissions. It sends emails to the site administrator using Nodemailer. The API handles email sending requests from the frontend.",
-    technologies: ["Node.js", "Express"],
+    technologies: ["NodeJS", "Express"],
     github: "https://github.com/petrmichal0/main-website-backend/tree/main",
     demo: "",
     documentation: "https://petrmichal0.github.io/main-website-backend/",
@@ -247,7 +256,7 @@ export const PROJECTS = [
     image: project9,
     description:
       "WeatherApp Backend is the server-side application that provides API endpoints for the WeatherApp frontend. It handles user authentication, weather data retrieval, and various other backend functionalities.",
-    technologies: ["Node.js", "Express", "MongoDB"],
+    technologies: ["NodeJS", "Express", "MongoDB"],
     github: "https://github.com/petrmichal0/weatherapp-backend",
     demo: "",
     documentation: "https://petrmichal0.github.io/weatherapp-backend/",
@@ -277,7 +286,7 @@ export const PROJECTS = [
     image: project12,
     description:
       "Redux-shop is a web application designed to provide a shopping experience with cart management. Users can browse products, add them to their cart, and view the cart's contents.",
-    technologies: ["React", "TypeScript", "Redux"],
+    technologies: ["React", "TypeScript"],
     github: "https://github.com/petrmichal0/Redux-shop",
     demo: "https://redux-shop-react-type.netlify.app/",
     documentation: "https://petrmichal0.github.io/Redux-shop/",
@@ -337,7 +346,7 @@ export const PROJECTS = [
     image: project18,
     description:
       "Pizza is a web application designed to manage a pizza restaurant's menu, orders, and user information. Users can browse the menu, place orders, and track their orders.",
-    technologies: ["React", "TailwindCSS", "Redux"],
+    technologies: ["React", "TailwindCSS"],
     github: "https://github.com/petrmichal0/pizza",
     demo: "https://pizza-2023.netlify.app/",
     documentation: "https://petrmichal0.github.io/pizza/",
