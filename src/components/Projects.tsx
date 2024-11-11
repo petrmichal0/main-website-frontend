@@ -13,6 +13,22 @@ type LinkIcon = {
   url?: string;
 };
 
+// Animation configurations
+const headingAnimation = {
+  whileInView: { opacity: 1, y: 0 },
+  initial: { opacity: 0, y: -100 },
+  transition: { duration: 1.5 },
+};
+
+const cardAnimation = (index: number) => ({
+  whileInView: { opacity: 1, y: 0 },
+  initial: { opacity: 0, y: 50 },
+  transition: {
+    duration: 0.7,
+    delay: index * 0.1,
+  },
+});
+
 // Link icons for GitHub, Demo, and Documentation
 const linkIcons: Record<string, LinkIcon> = {
   GitHub: { icon: <FaGithub />, color: "bg-gray-900", label: "GitHub" },
@@ -37,12 +53,7 @@ function Projects() {
   return (
     <div id="projects" className="border-b border-neutral-900 pb-4">
       {/* Section Title */}
-      <motion.h1
-        whileInView={{ opacity: 1, y: 0 }}
-        initial={{ opacity: 0, y: -100 }}
-        transition={{ duration: 1.5 }}
-        className="my-20 text-center text-4xl"
-      >
+      <motion.h1 {...headingAnimation} className="my-20 text-center text-4xl">
         Projects
       </motion.h1>
 
@@ -68,9 +79,7 @@ function Projects() {
         {filteredProjects.map((project, index) => (
           <motion.div
             key={index}
-            whileInView={{ opacity: 1, y: 0 }}
-            initial={{ opacity: 0, y: 50 }}
-            transition={{ duration: 0.5 }}
+            {...cardAnimation(index)}
             className="w-[350px] bg-neutral-800 p-6 rounded-lg shadow-md relative flex flex-col justify-between transition-transform transform hover:scale-105 hover:bg-neutral-700 hover:shadow-[0_0_15px_0_rgba(0,0,0,0.8)]"
           >
             {/* Project Image */}
