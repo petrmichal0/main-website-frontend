@@ -63,6 +63,16 @@ export const COURSES = [
     year: "2024 - Present",
     courses: [
       {
+        iconKey: ["Jest", "React Testing Library"],
+        text: "React Testing Library and Jest - Udemy",
+        link: "https://www.udemy.com/course/react-testing-library-and-jest/?couponCode=ST20MT111124A",
+      },
+      {
+        iconKey: "Jest",
+        text: "Unit Testing with Jest - Udemy",
+        link: "https://www.udemy.com/course/unit-testing-typescript-nodejs/?couponCode=ST20MT111124A",
+      },
+      {
         iconKey: "React Native",
         text: "React Native - Udemy",
         link: "https://www.udemy.com/course/react-native-the-practical-guide/?couponCode=KEEPLEARNING",
