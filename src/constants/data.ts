@@ -372,6 +372,16 @@ export const PROJECTS = [
     demo: "https://snack.expo.dev/@petrmichal0/my-recipe-book-v1?platform=android",
     documentation: "https://petrmichal0.github.io/my-recipe-book/",
   },
+  {
+    title: "Guess Number",
+    image: project21,
+    description:
+      "Guess Number is a simple React Native application where users try to guess a randomly generated number. The app provides feedback on whether the guess is higher or lower, with smooth animations and responsive UI.",
+    technologies: ["React Native", "Expo"],
+    github: "https://github.com/petrmichal0/guess-number",
+    demo: "https://snack.expo.dev/@petrmichal0/guess-number?platform=android",
+    documentation: "https://petrmichal0.github.io/guess-number/",
+  },
 ];
 
 export const CONTACT = {
