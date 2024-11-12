@@ -203,6 +203,8 @@ export const courseIconNames = [
   "Running",
   "Fitness",
   "Massage",
+  "Jest",
+  "React Testing Library",
 ] as const;
 
 export const technologyIconNames = [
