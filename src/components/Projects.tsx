@@ -40,7 +40,7 @@ const linkIcons: Record<string, LinkIcon> = {
   },
 };
 
-const filterOptions = ["All", "React", "React Native", "TypeScript", "Node.js"];
+const filterOptions = ["All", "React", "React Native", "TypeScript", "NodeJS"];
 
 function Projects() {
   const [activeFilter, setActiveFilter] = useState("All");
