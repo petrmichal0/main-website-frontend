@@ -19,6 +19,56 @@ const headingAnimation = {
   transition: { duration: 1.5 },
 };
 
+const sectionHeadingAnimation = (i: number) => ({
+  hidden: { opacity: 0, x: -100 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { delay: i * 0.3, duration: 0.6 },
+  },
+});
+
+const sections = [
+  {
+    title: "Frontend Technologies",
+    items: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React",
+      "React Native",
+      "TypeScript",
+      "Framer Motion",
+      "TailwindCSS",
+    ],
+  },
+  {
+    title: "Backend Technologies",
+    items: ["NodeJS", "Express", "Supabase", "Firebase", "MongoDB"],
+  },
+  {
+    title: "Tools and Platforms",
+    items: [
+      "Git",
+      "GitHub",
+      "VSCode",
+      "GPT",
+      "Heroku",
+      "Netlify",
+      "Postman",
+      "Expo",
+    ],
+  },
+  {
+    title: "Graphic Tools",
+    items: ["Figma", "Canva"],
+  },
+  {
+    title: "Testing Tools",
+    items: ["Jest", "React Testing Library"],
+  },
+];
+
 function Technologies() {
   const icons = baseIcons("large");
 
@@ -28,26 +78,39 @@ function Technologies() {
         Technologies
       </motion.h1>
 
-      <div className="flex flex-wrap items-center justify-center gap-4">
-        {technologyIconNames.map((tech, index) => {
-          const { icon, color } = icons[tech];
-          return (
-            <motion.div
-              key={tech}
-              variants={iconVariants(index)}
-              initial="hidden"
-              whileInView="visible"
-              className={`relative w-28 h-28 flex items-center justify-center rounded-md ${color} group`}
-            >
-              {icon}
-
-              <span className="absolute bottom-0 mb-2 text-xs text-white px-2 py-1 rounded bg-black opacity-0 group-hover:opacity-100 transition-opacity">
-                {tech}
-              </span>
-            </motion.div>
-          );
-        })}
-      </div>
+      {sections.map((section, index) => (
+        <div key={section.title} className="mb-12">
+          <motion.h2
+            variants={sectionHeadingAnimation(index)}
+            initial="hidden"
+            whileInView="visible"
+            className="text-2xl mb-6"
+          >
+            {section.title}
+          </motion.h2>
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            {section.items.map((tech, i) => {
+              const { icon, color } = icons[tech] || {}; // Fallback in case icon is missing
+              return (
+                <motion.div
+                  key={tech}
+                  variants={iconVariants(i)}
+                  initial="hidden"
+                  whileInView="visible"
+                  className={`relative w-28 h-28 flex items-center justify-center rounded-md ${color || "bg-neutral-800"} group`}
+                >
+                  {icon || (
+                    <span className="text-white">N/A</span> // Placeholder if icon is missing
+                  )}
+                  <span className="absolute bottom-0 mb-2 text-xs text-white px-2 py-1 rounded bg-black opacity-0 group-hover:opacity-100 transition-opacity">
+                    {tech}
+                  </span>
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
+      ))}
     </div>
   );
 }
