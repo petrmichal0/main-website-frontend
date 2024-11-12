@@ -317,7 +317,7 @@ export const PROJECTS = [
     image: project15,
     description:
       "FlashCard is a web application designed to help users create, manage, and study flashcards. Users can easily add new flashcards, edit existing ones, and quiz themselves on various topics.",
-    technologies: ["React"],
+    technologies: ["React", "Jest", "React Library Testing"],
     github: "https://github.com/petrmichal0/FlashCard",
     demo: "https://flashcards-v1.netlify.app/",
     documentation: "https://petrmichal0.github.io/FlashCard/",
