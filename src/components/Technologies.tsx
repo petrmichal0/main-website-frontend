@@ -24,7 +24,7 @@ const sectionHeadingAnimation = (i: number) => ({
   visible: {
     opacity: 1,
     x: 0,
-    transition: { delay: i * 0.3, duration: 0.6 },
+    transition: { delay: i * 0.1, duration: 0.6 },
   },
 });
 
@@ -84,7 +84,7 @@ function Technologies() {
             variants={sectionHeadingAnimation(index)}
             initial="hidden"
             whileInView="visible"
-            className="text-2xl mb-6"
+            className="text-2xl mb-6 text-center"
           >
             {section.title}
           </motion.h2>
