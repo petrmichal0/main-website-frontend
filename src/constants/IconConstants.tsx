@@ -180,7 +180,7 @@ const baseIcons = (size: IconSize) => ({
   },
   "React Testing Library": {
     icon: <SiTestinglibrary className={`${getIconClass(size)} text-white`} />,
-    color: "bg-pink-600",
+    color: "bg-[#C3231F]",
   },
 });
 
