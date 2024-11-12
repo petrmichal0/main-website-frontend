@@ -258,7 +258,7 @@ export const PROJECTS = [
     image: project4,
     description:
       "Bill-Split is a web application designed to help users split bills and manage balances with friends. Users can add friends, track balances, and split bills with ease.",
-    technologies: ["React"],
+    technologies: ["React", "Jest", "React Testing Library"],
     github: "https://github.com/petrmichal0/bill-split",
     demo: "https://billsplitfriends.netlify.app/",
     documentation: "https://petrmichal0.github.io/bill-split/",
@@ -378,7 +378,7 @@ export const PROJECTS = [
     image: project16,
     description:
       "Traveling is a user-friendly web application that helps users create and manage packing lists for their vacations. Users can easily add items to their lists, filter them, check them off as they are packed, remove items, and clear the entire list when needed.",
-    technologies: ["React"],
+    technologies: ["React", "Jest", "React Testing Library"],
     github: "https://github.com/petrmichal0/Traveling",
     demo: "https://travelinglist.netlify.app/",
     documentation: "https://petrmichal0.github.io/Traveling/",
