@@ -223,6 +223,7 @@ export const technologyIconNames = [
   "Postman",
   "Expo",
   "GitHub",
+  "Jest",
 ] as const;
 
 export const socialIconNames = ["GitHub", "LinkedIn"] as const;
