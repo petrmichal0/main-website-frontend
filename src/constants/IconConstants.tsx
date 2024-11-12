@@ -25,6 +25,7 @@ import {
   SiCanva,
   SiExpress,
   SiJest,
+  SiTestinglibrary,
 } from "react-icons/si";
 import { IoLogoFirebase } from "react-icons/io5";
 import { TbBrandFramerMotion } from "react-icons/tb";
@@ -177,6 +178,10 @@ const baseIcons = (size: IconSize) => ({
     icon: <SiJest className={`${getIconClass(size)} text-white`} />,
     color: "bg-orange-600",
   },
+  "React Testing Library": {
+    icon: <SiTestinglibrary className={`${getIconClass(size)} text-white`} />,
+    color: "bg-pink-600",
+  },
 });
 
 export const courseIconNames = [
@@ -224,6 +229,7 @@ export const technologyIconNames = [
   "Expo",
   "GitHub",
   "Jest",
+  "React Testing Library",
 ] as const;
 
 export const socialIconNames = ["GitHub", "LinkedIn"] as const;
