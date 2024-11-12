@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import baseIcons, { technologyIconNames } from "../constants/IconConstants";
+import { sections } from "../constants/data";
 
 const iconVariants = (i: number) => ({
   hidden: { opacity: 0, x: 100 },
@@ -27,47 +28,6 @@ const sectionHeadingAnimation = (i: number) => ({
     transition: { delay: i * 0.1, duration: 0.6 },
   },
 });
-
-const sections = [
-  {
-    title: "Frontend Technologies",
-    items: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "React",
-      "React Native",
-      "TypeScript",
-      "Framer Motion",
-      "TailwindCSS",
-    ],
-  },
-  {
-    title: "Backend Technologies",
-    items: ["NodeJS", "Express", "Supabase", "Firebase", "MongoDB"],
-  },
-  {
-    title: "Tools and Platforms",
-    items: [
-      "Git",
-      "GitHub",
-      "VSCode",
-      "GPT",
-      "Heroku",
-      "Netlify",
-      "Postman",
-      "Expo",
-    ],
-  },
-  {
-    title: "Graphic Tools",
-    items: ["Figma", "Canva"],
-  },
-  {
-    title: "Testing Tools",
-    items: ["Jest", "React Testing Library"],
-  },
-];
 
 function Technologies() {
   const icons = baseIcons("large");
