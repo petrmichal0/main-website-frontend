@@ -34,7 +34,7 @@ export const HERO_CONTENT: string = `I love technical challenges and finding goo
 
 export const ABOUT_TEXT: string = `My name is Petr Michal, and I always liked solving technical problems. I started as a team leader, where I learned how to make work processes better. Then, my friend showed me programming, and I found my passion. Step by step, I learned HTML, CSS, JavaScript, React, and Node.js, which helped me understand both frontend and backend development. I also learned to build mobile apps with React Native, so I can bring my applications to mobile devices. Now, I am focusing on OpenAI and exploring how artificial intelligence can improve modern apps. In my free time, I like running, cycling, and hiking.`;
 
-const sections = [
+export const sections = [
   {
     title: "Frontend Technologies",
     items: [
