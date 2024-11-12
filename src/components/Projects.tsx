@@ -40,15 +40,26 @@ const linkIcons: Record<string, LinkIcon> = {
   },
 };
 
-const filterOptions = ["All", "React", "React Native", "TypeScript", "NodeJS"];
+const filterOptions = ["All", "React", "React Native", "TypeScript", "NodeJS", "Testing"];
 
 function Projects() {
   const [activeFilter, setActiveFilter] = useState("All");
 
   // Filtered projects based on the active filter
-  const filteredProjects = PROJECTS.filter((project) =>
-    activeFilter === "All" ? true : project.technologies.includes(activeFilter)
-  );
+  const filteredProjects = PROJECTS.filter((project) => {
+    if (activeFilter === "All") {
+      return true;
+    }
+
+    if (activeFilter === "Testing") {
+      return (
+        project.technologies.includes("Jest") ||
+        project.technologies.includes("React Testing Library")
+      );
+    }
+
+    return project.technologies.includes(activeFilter);
+  });
 
   return (
     <div id="projects" className="border-b border-neutral-900 pb-4">
