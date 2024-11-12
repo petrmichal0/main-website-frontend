@@ -24,6 +24,7 @@ import {
   SiExpo,
   SiCanva,
   SiExpress,
+  SiJest,
 } from "react-icons/si";
 import { IoLogoFirebase } from "react-icons/io5";
 import { TbBrandFramerMotion } from "react-icons/tb";
@@ -171,6 +172,10 @@ const baseIcons = (size: IconSize) => ({
   LinkedIn: {
     icon: <FaLinkedin className={`${getIconClass(size)} text-white`} />,
     color: "bg-blue-500",
+  },
+  Jest: {
+    icon: <SiJest className={`${getIconClass(size)} text-white`} />,
+    color: "bg-orange-600",
   },
 });
 
