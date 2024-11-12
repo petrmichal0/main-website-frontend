@@ -18,6 +18,7 @@ import project17 from "../assets/projects/TicTacToe.jpg";
 import project18 from "../assets/projects/Pizza.jpg";
 import project19 from "../assets/projects/MainWebsiteV2.jpg";
 import project20 from "../assets/projects/MyRecipeBook.jpg";
+import project21 from "../assets/projects/GuessNumber.jpg";
 
 export const NAV_LINKS = [
   { section: "hero", label: "Hero" },
