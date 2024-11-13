@@ -44,12 +44,12 @@ function Courses() {
             >
               {courseGroup.courses.map((course, idx) => (
                 <div key={idx} className="mb-2 flex items-center">
-                  <span className="mr-2 flex items-center justify-center">
+                  <span className="mr-2 flex">
                     {Array.isArray(course.iconKey) ? (
                       course.iconKey.map((key, index) => (
                         <span
                           key={index}
-                          className={`flex items-center justify-center rounded-full p-2 ${
+                          className={`rounded-full p-2 ${
                             icons[key as keyof typeof icons]?.color || ""
                           }`}
                         >
@@ -58,7 +58,7 @@ function Courses() {
                       ))
                     ) : (
                       <span
-                        className={`flex items-center justify-center rounded-full p-2 ${
+                        className={`rounded-full p-2 ${
                           icons[course.iconKey as keyof typeof icons]?.color ||
                           ""
                         }`}
