@@ -12,15 +12,19 @@ const logoAnimation = {
 };
 
 const linkVariants = {
-  hidden: { opacity: 0, x: 100 },
-  visible: (i: number) => ({
-    opacity: 1,
-    x: 0,
-    transition: {
-      delay: i * 0.1,
-      duration: 0.5,
-    },
-  }),
+  variants: {
+    hidden: { opacity: 0, x: 100 },
+    visible: (i: number) => ({
+      opacity: 1,
+      x: 0,
+      transition: {
+        delay: i * 0.1,
+        duration: 0.5,
+      },
+    }),
+  },
+  initial: "hidden",
+  animate: "visible",
 };
 
 const Navbar = () => {
@@ -71,13 +75,7 @@ const Navbar = () => {
 
           <div className="hidden lg:flex space-x-8 text-xl text-neutral-300">
             {NAV_LINKS.map((link, index) => (
-              <motion.div
-                key={link.section}
-                custom={index}
-                initial="hidden"
-                animate="visible"
-                variants={linkVariants}
-              >
+              <motion.div key={link.section} custom={index} {...linkVariants}>
                 <Link
                   to={link.section}
                   smooth={true}
