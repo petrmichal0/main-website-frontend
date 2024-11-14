@@ -57,7 +57,7 @@ const Navbar = () => {
           isScrolled ? "bg-neutral-900" : "bg-transparent"
         }`}
       >
-        <div className="container flex items-center justify-between">
+        <div className="container mx-auto flex items-center justify-between">
           <motion.div {...logoAnimation}>
             <Link
               to="hero"
