@@ -1,11 +1,11 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
+    "target": "es6",
     "useDefineForClassFields": true,
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "lib": ["es2016", "dom"],
     "allowJs": false,
     "skipLibCheck": true,
-    "esModuleInterop": false,
+    "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
@@ -14,7 +14,14 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "types": ["jest", "@testing-library/jest-dom"]
   },
-  "include": ["src", "src/declarations.d.ts"] // Přidání souboru s deklaracemi
+  "include": [
+    "src",
+    "src/declarations.d.ts",
+    "src/setupTests.ts",
+    "**/*.test.ts",
+    "**/*.test.tsx"
+  ] // Přidání souboru s deklaracemi
 }
