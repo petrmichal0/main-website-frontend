@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import baseIcons, { technologyIconNames } from "../constants/IconConstants";
+import { baseIcons } from "../constants/IconConstants";
 import { sections } from "../constants/data";
 
 const iconVariants = (i: number) => ({
@@ -50,14 +50,16 @@ function Technologies() {
           </motion.h2>
           <div className="flex flex-wrap items-center justify-center gap-4">
             {section.items.map((tech, i) => {
-              const { icon, color } = icons[tech] || {}; // Fallback in case icon is missing
+              const { icon, color } = icons[tech] || {}; // Type assertion to IconName
               return (
                 <motion.div
                   key={tech}
                   variants={iconVariants(i)}
                   initial="hidden"
                   whileInView="visible"
-                  className={`relative w-28 h-28 flex items-center justify-center rounded-md ${color || "bg-neutral-800"} group`}
+                  className={`relative w-28 h-28 flex items-center justify-center rounded-md ${
+                    color || "bg-neutral-800"
+                  } group`}
                 >
                   {icon || (
                     <span className="text-white">N/A</span> // Placeholder if icon is missing
@@ -67,7 +69,7 @@ function Technologies() {
                   </span>
                 </motion.div>
               );
-            })}
+            })}{" "}
           </div>
         </div>
       ))}

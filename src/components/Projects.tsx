@@ -1,17 +1,10 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { PROJECTS } from "../constants/data";
-import baseIcons, { IconName } from "../constants/IconConstants"; // Import baseIcons
+import { baseIcons } from "../constants/IconConstants"; // Import baseIcons
+import { IconName } from "../constants/data";
 import { FaGithub } from "react-icons/fa";
-import { AiOutlineLink } from "react-icons/ai";
 import { BiBook, BiRightArrowAlt } from "react-icons/bi"; // Icons for links and documentation
-
-type LinkIcon = {
-  icon: JSX.Element;
-  color: string;
-  label: string;
-  url?: string;
-};
 
 // Animation configurations
 const headingAnimation = {
@@ -29,18 +22,14 @@ const cardAnimation = (index: number) => ({
   },
 });
 
-// Link icons for GitHub, Demo, and Documentation
-const linkIcons: Record<string, LinkIcon> = {
-  GitHub: { icon: <FaGithub />, color: "bg-gray-900", label: "GitHub" },
-  Demo: { icon: <AiOutlineLink />, color: "bg-gray-900", label: "Demo" },
-  Documentation: {
-    icon: <BiBook />,
-    color: "bg-gray-900",
-    label: "Documentation",
-  },
-};
-
-const filterOptions = ["All", "React", "React Native", "TypeScript", "NodeJS", "Testing"];
+const filterOptions = [
+  "All",
+  "React",
+  "React Native",
+  "TypeScript",
+  "NodeJS",
+  "Testing",
+];
 
 function Projects() {
   const [activeFilter, setActiveFilter] = useState("All");

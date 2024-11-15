@@ -20,7 +20,12 @@ import project19 from "../assets/projects/MainWebsiteV2.jpg";
 import project20 from "../assets/projects/MyRecipeBook.jpg";
 import project21 from "../assets/projects/GuessNumber.jpg";
 
-export const NAV_LINKS = [
+export type NavLink = {
+  section: string;
+  label: string;
+};
+
+export const NAV_LINKS: NavLink[] = [
   { section: "hero", label: "Hero" },
   { section: "about", label: "About" },
   { section: "technologies", label: "Technologies" },
@@ -34,7 +39,39 @@ export const HERO_CONTENT: string = `I love technical challenges and finding goo
 
 export const ABOUT_TEXT: string = `My name is Petr Michal, and I always liked solving technical problems. I started as a team leader, where I learned how to make work processes better. Then, my friend showed me programming, and I found my passion. Step by step, I learned HTML, CSS, JavaScript, React, and Node.js, which helped me understand both frontend and backend development. I also learned to build mobile apps with React Native, so I can bring my applications to mobile devices. Now, I am focusing on OpenAI and exploring how artificial intelligence can improve modern apps. In my free time, I like running, cycling, and hiking.`;
 
-export const sections = [
+export type IconName =
+  | "HTML"
+  | "CSS"
+  | "JavaScript"
+  | "React"
+  | "React Native"
+  | "TypeScript"
+  | "Framer Motion"
+  | "TailwindCSS"
+  | "NodeJS"
+  | "Express"
+  | "Supabase"
+  | "Firebase"
+  | "MongoDB"
+  | "Git"
+  | "GitHub"
+  | "VSCode"
+  | "GPT"
+  | "Heroku"
+  | "Netlify"
+  | "Figma"
+  | "Canva"
+  | "Postman"
+  | "Expo"
+  | "Jest"
+  | "React Testing Library";
+
+export type Section = {
+  title: string;
+  items: IconName[];
+};
+
+export const sections: Section[] = [
   {
     title: "Frontend Technologies",
     items: [
@@ -75,7 +112,14 @@ export const sections = [
   },
 ];
 
-export const EXPERIENCES = [
+export type Experience = {
+  year: string;
+  role: string;
+  company: string;
+  description: string;
+};
+
+export const EXPERIENCES: Experience[] = [
   {
     year: "2022 - Present",
     role: "Administrative Worker",
@@ -96,7 +140,16 @@ export const EXPERIENCES = [
   },
 ];
 
-export const COURSES = [
+type Courses = {
+  year: string;
+  courses: {
+    iconKey: string[] | string;
+    text: string;
+    link: string;
+  }[];
+};
+
+export const COURSES: Courses[] = [
   {
     year: "2024 - Present",
     courses: [
@@ -219,7 +272,69 @@ export const COURSES = [
   },
 ];
 
-export const PROJECTS = [
+export const courseIconNames = [
+  "React Native",
+  "Figma",
+  "NodeJS",
+  "Express",
+  "MongoDB",
+  "TypeScript",
+  "Git",
+  "GitHub",
+  "React",
+  "JavaScript",
+  "HTML",
+  "CSS",
+  "Management",
+  "Coaching",
+  "Excel",
+  "Running",
+  "Fitness",
+  "Massage",
+  "Jest",
+  "React Testing Library",
+] as const;
+
+export const technologyIconNames = [
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "React",
+  "TypeScript",
+  "React Native",
+  "NodeJS",
+  "Express",
+  "MongoDB",
+  "TailwindCSS",
+  "Framer Motion",
+  "Supabase",
+  "Firebase",
+  "VSCode",
+  "GPT",
+  "Heroku",
+  "Netlify",
+  "Figma",
+  "Canva",
+  "Postman",
+  "Expo",
+  "GitHub",
+  "Jest",
+  "React Testing Library",
+] as const;
+
+export const socialIconNames = ["GitHub", "LinkedIn"] as const;
+
+type Projects = {
+  title: string;
+  image: string;
+  description: string;
+  technologies: string[];
+  github: string;
+  demo: string;
+  documentation: string;
+};
+
+export const PROJECTS: Projects[] = [
   {
     title: "Main Website Frontend",
     image: project1,
@@ -432,7 +547,13 @@ export const PROJECTS = [
   },
 ];
 
-export const CONTACT = {
+type Contact = {
+  address: string;
+  phoneNo: string;
+  email: string;
+};
+
+export const CONTACT: Contact = {
   address: "Neratovice",
   phoneNo: "+420 737 967 806 ",
   email: "petrmichal0@gmail.com",

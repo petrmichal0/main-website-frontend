@@ -33,7 +33,7 @@ import { VscVscode } from "react-icons/vsc";
 import { BiLogoHeroku } from "react-icons/bi";
 import chatgptImage from "/chatgpt.png";
 
-export type IconSize = "small" | "medium" | "large";
+type IconSize = "small" | "medium" | "large";
 
 function getIconClass(size: IconSize): string {
   switch (size) {
@@ -48,8 +48,13 @@ function getIconClass(size: IconSize): string {
   }
 }
 
+type BaseIcon = {
+  icon: JSX.Element;
+  color: string;
+};
+
 // Define the base icons with all configurations in a single object
-const baseIcons = (size: IconSize) => ({
+export const baseIcons = (size: IconSize): Record<string, BaseIcon> => ({
   "React Native": {
     icon: <RiReactjsLine className={`${getIconClass(size)} text-white`} />,
     color: "bg-[#0d99ff]",
@@ -183,61 +188,3 @@ const baseIcons = (size: IconSize) => ({
     color: "bg-[#C3231F]",
   },
 });
-
-export const courseIconNames = [
-  "React Native",
-  "Figma",
-  "NodeJS",
-  "Express",
-  "MongoDB",
-  "TypeScript",
-  "Git",
-  "GitHub",
-  "React",
-  "JavaScript",
-  "HTML",
-  "CSS",
-  "Management",
-  "Coaching",
-  "Excel",
-  "Running",
-  "Fitness",
-  "Massage",
-  "Jest",
-  "React Testing Library",
-] as const;
-
-export const technologyIconNames = [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "React",
-  "TypeScript",
-  "React Native",
-  "NodeJS",
-  "Express",
-  "MongoDB",
-  "TailwindCSS",
-  "Framer Motion",
-  "Supabase",
-  "Firebase",
-  "VSCode",
-  "GPT",
-  "Heroku",
-  "Netlify",
-  "Figma",
-  "Canva",
-  "Postman",
-  "Expo",
-  "GitHub",
-  "Jest",
-  "React Testing Library",
-] as const;
-
-export const socialIconNames = ["GitHub", "LinkedIn"] as const;
-
-export type IconName =
-  | (typeof courseIconNames)[number]
-  | (typeof technologyIconNames)[number]
-  | (typeof socialIconNames)[number];
-export default baseIcons;

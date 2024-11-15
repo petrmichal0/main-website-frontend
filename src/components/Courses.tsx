@@ -1,6 +1,6 @@
 import { COURSES } from "../constants/data";
 import { motion } from "framer-motion";
-import baseIcons from "../constants/IconConstants";
+import { baseIcons } from "../constants/IconConstants";
 
 const headingAnimation = {
   whileInView: { opacity: 1, y: 0 },
@@ -44,33 +44,39 @@ function Courses() {
             >
               {courseGroup.courses.map((course, idx) => (
                 <div key={idx} className="mb-2 flex items-center">
+                  {/* Icons */}
                   <span className="mr-2 flex">
-                    {Array.isArray(course.iconKey) ? (
-                      course.iconKey.map((key, index) => (
-                        <span
-                          key={index}
-                          className={`rounded-full p-2 ${
-                            icons[key as keyof typeof icons]?.color || ""
-                          }`}
-                        >
-                          {icons[key as keyof typeof icons]?.icon}
-                        </span>
-                      ))
-                    ) : (
-                      <span
-                        className={`rounded-full p-2 ${
-                          icons[course.iconKey as keyof typeof icons]?.color ||
-                          ""
-                        }`}
-                      >
-                        {icons[course.iconKey as keyof typeof icons]?.icon}
-                      </span>
-                    )}
+                    {Array.isArray(course.iconKey)
+                      ? course.iconKey.map((key, index) => {
+                          const icon = icons[key];
+                          return (
+                            <span
+                              key={index}
+                              className={`rounded-full p-2 ${
+                                icon?.color || ""
+                              }`}
+                            >
+                              {icon?.icon}
+                            </span>
+                          );
+                        })
+                      : (() => {
+                          const icon = icons[course.iconKey];
+                          return (
+                            <span
+                              className={`rounded-full p-2 ${
+                                icon?.color || ""
+                              }`}
+                            >
+                              {icon?.icon}
+                            </span>
+                          );
+                        })()}
                   </span>
+                  {/* Text */}
                   <span>{course.text}</span>
-                  {course.link === "" ? (
-                    ""
-                  ) : (
+                  {/* Link */}
+                  {course.link && (
                     <a
                       href={course.link}
                       target="_blank"
