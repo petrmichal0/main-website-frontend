@@ -1,5 +1,4 @@
 import { ABOUT_TEXT } from "../constants/data";
-import aboutImg from "../assets/about.jpg";
 import { motion } from "framer-motion";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 
@@ -30,7 +29,7 @@ function About() {
       <div className="flex flex-wrap">
         <motion.div {...imageAnimation} className="w-full lg:w-1/2 lg:p-8">
           <div className="flex items-center justify-center">
-            <img className="rounded-2xl" src={aboutImg} alt="about" />{" "}
+            <img className="rounded-2xl" src="about.jpg" alt="about" />{" "}
           </div>
         </motion.div>
 

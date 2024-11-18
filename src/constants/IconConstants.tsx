@@ -31,7 +31,6 @@ import { IoLogoFirebase } from "react-icons/io5";
 import { TbBrandFramerMotion } from "react-icons/tb";
 import { VscVscode } from "react-icons/vsc";
 import { BiLogoHeroku } from "react-icons/bi";
-import chatgptImage from "/chatgpt.png";
 
 type IconSize = "small" | "medium" | "large";
 
@@ -152,7 +151,7 @@ export const baseIcons = (size: IconSize): Record<string, BaseIcon> => ({
     color: "bg-[#30a3f1]",
   },
   GPT: {
-    icon: <img src={chatgptImage} alt="ChatGPT" className="w-16 h-16" />,
+    icon: <img src="chatgpt.png" alt="ChatGPT" className="w-16 h-16" />,
     color: "bg-gray-800",
   },
   Heroku: {

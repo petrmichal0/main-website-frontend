@@ -1,6 +1,5 @@
 import { ReactTyped } from "react-typed"; // Importing the ReactTyped component for typing effect
 import { HERO_CONTENT } from "../constants/data";
-import profilePic from "../assets/mountainProfile.png";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll"; // Import for smooth scrolling functionality
 
@@ -110,7 +109,7 @@ function Hero() {
         <div className="flex justify-center lg:justify-end">
           <motion.img
             {...imageAnimation}
-            src={profilePic}
+            src="mountainProfile.png"
             alt="Petr Michal"
             className="max-h-[400px] lg:max-h-[500px] w-full object-cover rounded-2xl"
           />

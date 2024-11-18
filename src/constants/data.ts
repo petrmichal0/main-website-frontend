@@ -1,25 +1,3 @@
-import project1 from "../assets/projects/MainWebsiteFrontend.jpg";
-import project2 from "../assets/projects/Backend.jpg";
-import project3 from "../assets/projects/WorldWise.jpg";
-import project4 from "../assets/projects/BillSplit.jpg";
-import project5 from "../assets/projects/ReactQuiz.jpg";
-import project6 from "../assets/projects/Calculator.jpg";
-import project7 from "../assets/projects/Hangman.jpg";
-import project8 from "../assets/projects/WeatherAppFrontend.jpg";
-import project9 from "../assets/projects/Backend.jpg";
-import project10 from "../assets/projects/Goals.jpg";
-import project11 from "../assets/projects/Timer.jpg";
-import project12 from "../assets/projects/ReduxShop.jpg";
-import project13 from "../assets/projects/MemoryCards.jpg";
-import project14 from "../assets/projects/Movies.jpg";
-import project15 from "../assets/projects/FlashCards.jpg";
-import project16 from "../assets/projects/Traveling.jpg";
-import project17 from "../assets/projects/TicTacToe.jpg";
-import project18 from "../assets/projects/Pizza.jpg";
-import project19 from "../assets/projects/MainWebsiteV2.jpg";
-import project20 from "../assets/projects/MyRecipeBook.jpg";
-import project21 from "../assets/projects/GuessNumber.jpg";
-
 export type NavLink = {
   section: string;
   label: string;
@@ -337,7 +315,7 @@ type Projects = {
 export const PROJECTS: Projects[] = [
   {
     title: "Main Website Frontend",
-    image: project1,
+    image: "/projects/MainWebsiteFrontend.jpg",
     description:
       "Main Website Frontend is a portfolio web application built using modern web technologies. It includes sections for showcasing personal projects, skills, experiences, and providing a way to contact me through a form.",
     technologies: ["React", "TypeScript", "Framer Motion", "TailwindCSS"],
@@ -347,7 +325,7 @@ export const PROJECTS: Projects[] = [
   },
   {
     title: "Main Website Backend",
-    image: project2,
+    image: "/projects/Backend.jpg",
     description:
       "Main Website Backend is a server-side application that handles contact form submissions. It sends emails to the site administrator using Nodemailer. The API handles email sending requests from the frontend.",
     technologies: ["NodeJS", "Express"],
@@ -357,7 +335,7 @@ export const PROJECTS: Projects[] = [
   },
   {
     title: "World Wise",
-    image: project3,
+    image: "/projects/WorldWise.jpg",
     description:
       "WorldWise is an interactive web application designed to track your travel adventures. Users can add cities they visited, explore city details, and visualize their travels on a world map.",
     technologies: ["React"],
@@ -367,7 +345,7 @@ export const PROJECTS: Projects[] = [
   },
   {
     title: "Bill Split",
-    image: project4,
+    image: "/projects/BillSplit.jpg",
     description:
       "Bill-Split is a web application designed to help users split bills and manage balances with friends. Users can add friends, track balances, and split bills with ease.",
     technologies: ["React", "Jest", "React Testing Library"],
@@ -377,7 +355,7 @@ export const PROJECTS: Projects[] = [
   },
   {
     title: "The React Quiz",
-    image: project5,
+    image: "/projects/ReactQuiz.jpg",
     description:
       "The React Quiz is an interactive web-based quiz application designed to test users' knowledge of React, a popular JavaScript library. The quiz consists of multiple questions, tracking scores, high scores, and allows users to restart the quiz or finish it once they have answered all questions.",
     technologies: ["React"],
@@ -387,7 +365,7 @@ export const PROJECTS: Projects[] = [
   },
   {
     title: "Calculater",
-    image: project6,
+    image: "/projects/Calculator.jpg",
     description:
       "Calculater is a web application designed to perform basic arithmetic calculations with a user-friendly interface. It allows users to add, subtract, multiply, and divide numbers with ease.",
     technologies: ["React"],
@@ -397,7 +375,7 @@ export const PROJECTS: Projects[] = [
   },
   {
     title: "Hangman",
-    image: project7,
+    image: "/projects/Hangman.jpg",
     description:
       "Calculater is a web application designed to perform basic arithmetic calculations with a user-friendly interface. It allows users to add, subtract, multiply, and divide numbers with ease.",
     technologies: ["React", "TypeScript"],
@@ -407,7 +385,7 @@ export const PROJECTS: Projects[] = [
   },
   {
     title: "Weather App Frontend",
-    image: project8,
+    image: "/projects/WeatherAppFrontend.jpg",
     description:
       "WeatherApp is a web application designed to provide weather information to users. It allows users to search for current weather conditions and forecasts for specific locations. The application offers user-friendly interfaces for login, registration, and weather data display.",
     technologies: ["React", "TailwindCSS"],
@@ -417,7 +395,7 @@ export const PROJECTS: Projects[] = [
   },
   {
     title: "Weather App Backend",
-    image: project9,
+    image: "/projects/Backend.jpg",
     description:
       "WeatherApp Backend is the server-side application that provides API endpoints for the WeatherApp frontend. It handles user authentication, weather data retrieval, and various other backend functionalities.",
     technologies: ["NodeJS", "Express", "MongoDB"],
@@ -427,7 +405,7 @@ export const PROJECTS: Projects[] = [
   },
   {
     title: "Goals",
-    image: project10,
+    image: "/projects/Goals.jpg",
     description:
       "Goals is a web application designed to help users set, track, and achieve their goals. Users can create new goals, view a list of their current goals, and mark goals as completed.",
     technologies: ["React", "TypeScript"],
@@ -437,7 +415,7 @@ export const PROJECTS: Projects[] = [
   },
   {
     title: "Timer",
-    image: project11,
+    image: "/projects/Timer.jpg",
     description:
       "Timer is a web application designed to help users set, manage, and track multiple timers. Users can add new timers, edit existing ones, and keep track of their remaining time.",
     technologies: ["React", "TypeScript"],
@@ -447,7 +425,7 @@ export const PROJECTS: Projects[] = [
   },
   {
     title: "Redux Shop",
-    image: project12,
+    image: "/projects/ReduxShop.jpg",
     description:
       "Redux-shop is a web application designed to provide a shopping experience with cart management. Users can browse products, add them to their cart, and view the cart's contents.",
     technologies: ["React", "TypeScript"],
@@ -457,7 +435,7 @@ export const PROJECTS: Projects[] = [
   },
   {
     title: "Memory Cards",
-    image: project13,
+    image: "/projects/MemoryCards.jpg",
     description:
       "Memory Cards is an application for practicing memory using memory cards.",
     technologies: ["React"],
@@ -467,7 +445,7 @@ export const PROJECTS: Projects[] = [
   },
   {
     title: "Movies",
-    image: project14,
+    image: "/projects/Movies.jpg",
     description:
       "Movies is a web application that allows users to search for movies, view details, and manage their watched movies list.",
     technologies: ["React"],
@@ -477,7 +455,7 @@ export const PROJECTS: Projects[] = [
   },
   {
     title: "Flash Card",
-    image: project15,
+    image: "/projects/FlashCards.jpg",
     description:
       "FlashCard is a web application designed to help users create, manage, and study flashcards. Users can easily add new flashcards, edit existing ones, and quiz themselves on various topics.",
     technologies: ["React", "Jest", "React Testing Library"],
@@ -487,7 +465,7 @@ export const PROJECTS: Projects[] = [
   },
   {
     title: "Traveling",
-    image: project16,
+    image: "/projects/Traveling.jpg",
     description:
       "Traveling is a user-friendly web application that helps users create and manage packing lists for their vacations. Users can easily add items to their lists, filter them, check them off as they are packed, remove items, and clear the entire list when needed.",
     technologies: ["React", "Jest", "React Testing Library"],
@@ -497,7 +475,7 @@ export const PROJECTS: Projects[] = [
   },
   {
     title: "Tic Tac Toe",
-    image: project17,
+    image: "/projects/TicTacToe.jpg",
     description:
       "Tic Tac Toe is a web application that allows users to play the classic Tic Tac Toe game against another player.",
     technologies: ["React"],
@@ -507,7 +485,7 @@ export const PROJECTS: Projects[] = [
   },
   {
     title: "Pizza",
-    image: project18,
+    image: "/projects/Pizza.jpg",
     description:
       "Pizza is a web application designed to manage a pizza restaurant's menu, orders, and user information. Users can browse the menu, place orders, and track their orders.",
     technologies: ["React", "TailwindCSS"],
@@ -517,7 +495,7 @@ export const PROJECTS: Projects[] = [
   },
   {
     title: "Main Website v2",
-    image: project19,
+    image: "/projects/MainWebsiteV2.jpg",
     description:
       "Main Website v2 is a portfolio web application that showcases projects, skills, and personal information using modern technologies such as React and Vite.",
     technologies: ["React"],
@@ -527,7 +505,7 @@ export const PROJECTS: Projects[] = [
   },
   {
     title: "My Recipe Book",
-    image: project20,
+    image: "/projects/MyRecipeBook.jpg",
     description:
       "My Recipe Book is a React Native application that allows users to explore and manage recipes with an easy-to-use interface. The app provides features like recipe categories, detailed views, and favorite recipes management.",
     technologies: ["React Native", "Expo"],
@@ -537,7 +515,7 @@ export const PROJECTS: Projects[] = [
   },
   {
     title: "Guess Number",
-    image: project21,
+    image: "/projects/GuessNumber.jpg",
     description:
       "Guess Number is a simple React Native application where users try to guess a randomly generated number. The app provides feedback on whether the guess is higher or lower, with smooth animations and responsive UI.",
     technologies: ["React Native", "Expo"],

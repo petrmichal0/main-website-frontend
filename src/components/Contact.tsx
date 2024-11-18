@@ -35,15 +35,17 @@ function Contact() {
 
     if (!email || !message) {
       setError("Please provide both email and message.");
-      return;
-    }
-    if (message.length > maxLength) {
-      setError(`Message exceeds ${maxLength} characters.`);
+      setStatus("");
+      console.log("Error: Missing email or message."); // Debugging výpis
+
       return;
     }
 
     try {
+      setError("");
       setIsLoading(true);
+      console.log("isLoading set to true"); // Debugging výpis
+
       const response = await axios.post(
         "https://main-website-backend-f90ccd0e7203.herokuapp.com/api/contact",
         { email, message }
@@ -53,13 +55,17 @@ function Contact() {
         setStatus("Your message has been sent!");
         setEmail("");
         setMessage("");
+        console.log("Message sent successfully."); // Debugging výpis
       } else {
         setError("Failed to send message. Please try again.");
+        console.log("Failed to send message."); // Debugging výpis
       }
     } catch (error) {
       setError("Error sending email. Please try again.");
+      console.log("Error during sending email:", error); // Debugging výpis
     } finally {
       setIsLoading(false);
+      console.log("isLoading set to false"); // Debugging výpis
     }
   };
 
@@ -96,7 +102,6 @@ function Contact() {
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Your Email"
               className="p-3 rounded bg-neutral-700 text-white"
-              required
             />
             <textarea
               value={message}
@@ -104,7 +109,6 @@ function Contact() {
               placeholder={`Your message (max ${maxLength} characters)`}
               className="p-3 rounded bg-neutral-700 text-white"
               maxLength={maxLength}
-              required
             />
             {error && <p className="text-red-500">{error}</p>}
             {status && <p className="text-green-500">{status}</p>}
@@ -112,6 +116,7 @@ function Contact() {
               type="submit"
               className="py-3 px-6 rounded bg-cyan-300 text-black hover:bg-cyan-400 flex items-center justify-center space-x-2"
               disabled={isLoading}
+              onClick={() => console.log("Disabled value:", isLoading)}
             >
               {isLoading && <FaSpinner className="animate-spin mr-2" />}
               <span>{isLoading ? "Sending..." : "Send Message"}</span>
