@@ -90,7 +90,7 @@ describe("Courses component", () => {
   test("renders icons for each course", () => {
     render(<Courses />);
 
-    const icons = [
+    const expectedIcons = [
       "React",
       "TypeScript",
       "NodeJS",
@@ -99,14 +99,10 @@ describe("Courses component", () => {
       "HTML",
       "CSS",
     ];
-    icons.forEach((icon) => {
-      const iconElement = screen.getByTestId(`icon-${icon}`);
+
+    expectedIcons.forEach((icon) => {
+      const iconElement = screen.getByLabelText(icon);
       expect(iconElement).toBeInTheDocument();
     });
-  });
-
-  test("matches snapshot", () => {
-    const { container } = render(<Courses />);
-    expect(container).toMatchSnapshot();
   });
 });

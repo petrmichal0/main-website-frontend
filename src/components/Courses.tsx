@@ -55,6 +55,7 @@ function Courses() {
                               className={`rounded-full p-2 ${
                                 icon?.color || ""
                               }`}
+                              aria-label={key}
                             >
                               {icon?.icon}
                             </span>
@@ -67,6 +68,7 @@ function Courses() {
                               className={`rounded-full p-2 ${
                                 icon?.color || ""
                               }`}
+                              aria-label={course.iconKey}
                             >
                               {icon?.icon}
                             </span>
