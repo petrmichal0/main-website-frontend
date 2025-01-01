@@ -76,10 +76,7 @@ function Hero() {
           />
         </motion.h1>
 
-        <motion.p
-          {...contentAnimation}
-          className="my-2 max-w-xl py-6 font-light tracking-tighter lg:tracking-normal"
-        >
+        <motion.p {...contentAnimation} className="my-2 max-w-xl py-6">
           {HERO_CONTENT}
         </motion.p>
 
