@@ -58,7 +58,7 @@ function Projects() {
       </motion.h1>
 
       {/* Filter Buttons */}
-      <div className="flex justify-center space-x-4 mb-10">
+      <div className="flex flex-col lg:flex-row justify-center items-center gap-4 mb-10">
         {filterOptions.map((filter) => (
           <button
             key={filter}
@@ -67,7 +67,7 @@ function Projects() {
               activeFilter === filter
                 ? "bg-cyan-300 text-black"
                 : "bg-neutral-300 text-black"
-            } px-4 py-2 rounded-md font-medium`}
+            } px-4 py-2 rounded-md w-[150px] font-medium`}
           >
             {filter}
           </button>
