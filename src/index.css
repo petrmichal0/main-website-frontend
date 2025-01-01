@@ -11,3 +11,7 @@
 .active {
   color: cyan; /* Barva pro aktivní odkazs */
 }
+
+* {
+  outline: 1px solid red;
+}
