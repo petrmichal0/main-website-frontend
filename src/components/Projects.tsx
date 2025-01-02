@@ -13,12 +13,12 @@ const headingAnimation = {
   transition: { duration: 1.5 },
 };
 
-const cardAnimation = (index: number) => ({
+const cardAnimation = () => ({
   whileInView: { opacity: 1, y: 0 },
   initial: { opacity: 0, y: 50 },
   transition: {
-    duration: 0.7,
-    delay: index * 0.1,
+    duration: 0.5,
+    delay: 0.1,
   },
 });
 
@@ -79,8 +79,8 @@ function Projects() {
         {filteredProjects.map((project, index) => (
           <motion.div
             key={index}
-            {...cardAnimation(index)}
-            className="w-[350px] bg-neutral-800 p-6 rounded-lg shadow-md relative flex flex-col justify-between transition-transform transform hover:scale-105 hover:bg-neutral-700 hover:shadow-[0_0_15px_0_rgba(0,0,0,0.8)]"
+            {...cardAnimation()}
+            className="w-[350px] bg-neutral-800 p-6 rounded-lg shadow-md relative flex flex-col justify-between  hover:bg-neutral-700 hover:shadow-[0_0_15px_0_rgba(0,0,0,0.8)]"
           >
             {/* Project Image */}
             <div className="relative">
