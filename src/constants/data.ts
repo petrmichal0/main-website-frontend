@@ -19,6 +19,7 @@ import project18 from "../assets/projects/Pizza.jpg";
 import project19 from "../assets/projects/MainWebsiteV2.jpg";
 import project20 from "../assets/projects/MyRecipeBook.jpg";
 import project21 from "../assets/projects/GuessNumber.jpg";
+import project22 from "../assets/projects/ExpenseTracker.jpg";
 
 export type NavLink = {
   section: string;
@@ -544,6 +545,26 @@ export const PROJECTS: Projects[] = [
     github: "https://github.com/petrmichal0/guess-number",
     demo: "https://snack.expo.dev/@petrmichal0/guess-number?platform=android",
     documentation: "https://petrmichal0.github.io/guess-number/",
+  },
+  {
+    title: "Expense Tracker Backend",
+    image: project9,
+    description:
+      "Expense Tracker Backend is a server-side application that provides functionality for managing expenses. It interacts with a MongoDB database to store, update, and delete expenses. The backend is designed to work with a frontend application.",
+    technologies: ["NodeJS", "Express", "MongoDB"],
+    github: "https://github.com/petrmichal0/expense-tracker-backend",
+    demo: "",
+    documentation: "https://petrmichal0.github.io/expense-tracker-backend/",
+  },
+  {
+    title: "Expense Tracker Frontend",
+    image: project22,
+    description:
+      "Expense Tracker Frontend is a React Native app to help users track their spending. Users can add, edit, and delete expenses, view them by time period, and sync data with the backend.",
+    technologies: ["React Native", "Expo"],
+    github: "https://github.com/petrmichal0/expense-tracker-frontend",
+    demo: "https://snack.expo.dev/@petrmichal0/expense-tracker-frontend?platform=android",
+    documentation: "https://petrmichal0.github.io/expense-tracker-frontend/",
   },
 ];
 
