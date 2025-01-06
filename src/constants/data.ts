@@ -20,6 +20,7 @@ import project19 from "../assets/projects/MainWebsiteV2.jpg";
 import project20 from "../assets/projects/MyRecipeBook.jpg";
 import project21 from "../assets/projects/GuessNumber.jpg";
 import project22 from "../assets/projects/ExpenseTracker.jpg";
+import project23 from "../assets/projects/MyFavoritePlaces.jpg";
 
 export type NavLink = {
   section: string;
@@ -565,6 +566,26 @@ export const PROJECTS: Projects[] = [
     github: "https://github.com/petrmichal0/expense-tracker-frontend",
     demo: "https://snack.expo.dev/@petrmichal0/expense-tracker-frontend?platform=android",
     documentation: "https://petrmichal0.github.io/expense-tracker-frontend/",
+  },
+  {
+    title: "My Favorite Places Frontend",
+    image: project23,
+    description:
+      "My Favorite Places Frontend is a React Native application that allows users to explore and manage their favorite locations with an easy-to-use interface. The app provides features like adding new places, viewing details, location picking on a map, and storing images.",
+    technologies: ["React Native", "Expo"],
+    github: "https://github.com/petrmichal0/my-favorite-places-frontend",
+    demo: "https://snack.expo.dev/@petrmichal0/my-favorite-places-frontend?platform=android",
+    documentation: "https://petrmichal0.github.io/my-favorite-places-frontend/",
+  },
+  {
+    title: "My Favorite Places Backend",
+    image: project9,
+    description:
+      "My Favorite Places Backend is a server-side application that provides location services such as fetching geocoded addresses and generating map previews based on latitude and longitude. The backend API communicates with Google Maps API to fetch location data for the frontend application.",
+    technologies: ["NodeJS", "Express"],
+    github: "https://github.com/petrmichal0/my-favorite-places-backend",
+    demo: "",
+    documentation: "https://petrmichal0.github.io/my-favorite-places-backend/",
   },
 ];
 
